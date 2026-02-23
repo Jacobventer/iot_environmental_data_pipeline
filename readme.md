@@ -89,9 +89,7 @@ The system consists of:
    docker exec -it iot-environmental-sensor-data-pipeline-mongodb-1 mongosh
    ```
    Then inside MongoDB, run:
-
-   javascript
-   ```bash
+   ```javascript
    show dbs
    use sensor_db
    db.sensor_readings.countDocuments()
