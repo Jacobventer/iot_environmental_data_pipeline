@@ -72,18 +72,18 @@ The system consists of:
    ```bash
    git clone https://github.com/<your-username>/iot-environmental-sensor-data-pipeline.git
 2. Navigate to the project directory:
-```
-cd Documents
-```
+   ```bash
+   cd Documents
+   ```
 3. Start the data pipeline using Docker Compose:
-``` bash
-cd iot-environmental-sensor-data-pipeline
-```
-This command starts a MongoDB container and automatically executes the Python scripts to initialize the database and load the environmental sensor data in batches.
-To stop the system, press CTRL + C, and optionally remove the containers with:
-``` bash
-docker compose down
-```
+   ``` bash
+   cd iot-environmental-sensor-data-pipeline
+   ```
+   This command starts a MongoDB container and automatically executes the Python scripts to initialize the database and load the environmental sensor data in batches.
+   To stop the system, press CTRL + C, and optionally remove the containers with:
+   ``` bash
+   docker compose down
+   ```
 
 ## Notes
 This project was developed as part of a Data Engineering portfolio assignment. The focus is on portability, scalability, and maintainability rather than real-time streaming or front-end visualization.
