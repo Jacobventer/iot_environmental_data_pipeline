@@ -32,6 +32,7 @@ iot-environmental-sensor-data-pipeline/
 
 The dataset used in this project is the *Environmental Sensor Telemetry Dataset* from Kaggle (405,184 rows × 9 columns).
 Availible at: https://www.kaggle.com/code/rjconstable/environmental-sensor-telemetry-dataset/input
+
 Each record is time-stamped and includes measurements such as:
 - Temperature  
 - Humidity  
