@@ -72,6 +72,7 @@ The system consists of:
    ```bash
    git clone https://github.com/<your-username>/iot-environmental-sensor-data-pipeline.git
    cd iot-environmental-sensor-data-pipeline
+   ```
 2. Download the dataset
    Go to: https://www.kaggle.com/code/rjconstable/environmental-sensor-telemetry-dataset/input
    Download iot_telemetry_data.csv
@@ -89,6 +90,7 @@ The system consists of:
    docker exec -it iot-environmental-sensor-data-pipeline-mongodb-1 mongosh
    ```
    Then inside MongoDB, run:
+
    javascript
    ```bash
    show dbs
