@@ -1,5 +1,5 @@
 # IoT Environmental Sensor Data Pipeline
-## Overveiw
+## Overview
 
 This project implements a portable data engineering system to ingest, store, and manage IoT environmental sensor telemetry data for municipal analysis and citizen alerting. 
 The focus is on modern data engineering practices such as containerization, batch ingestion, and scalable storage.
@@ -11,7 +11,7 @@ Environmental sensor deployments produce large volumes of time-series data. To s
 Municipal planners require reliable historical insights into environmental conditions, and real-time data availability to alert citizens when thresholds are exceeded. 
 However, sensor structures may vary and evolve in the future, making fixed database schemas impractical. This system addresses schema flexibility, portability, and maintainability.
 
-## Project layout
+## Project Structure
 ```bash
 iot-environmental-sensor-data-pipeline/
 │
@@ -71,3 +71,29 @@ The system consists of:
 1. Clone the repository:
    ```bash
    git clone https://github.com/<your-username>/iot-environmental-sensor-data-pipeline.git
+2. Navigate to the project directory:
+```
+cd Documents
+```
+3. Start the data pipeline using Docker Compose:
+``` bash
+cd iot-environmental-sensor-data-pipeline
+```
+This command starts a MongoDB container and automatically executes the Python scripts to initialize the database and load the environmental sensor data in batches.
+To stop the system, press CTRL + C, and optionally remove the containers with:
+``` bash
+docker compose down
+```
+
+## Notes
+This project was developed as part of a Data Engineering portfolio assignment. The focus is on portability, scalability, and maintainability rather than real-time streaming or front-end visualization.
+
+## Author
+Jaco Venter
+
+BSc Data Science student at International University of Applied Scinece (Germany)
+
+https://www.linkedin.com/in/jaco-venter-45502a162/
+
+## License
+This project is licensed under the MIT License.
