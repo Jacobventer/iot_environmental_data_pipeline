@@ -31,7 +31,7 @@ iot-environmental-sensor-data-pipeline/
 ## Dataset
 
 The dataset used in this project is the *Environmental Sensor Telemetry Dataset* from Kaggle (405,184 rows × 9 columns).
-Availible at: [Data set](https://www.kaggle.com/code/rjconstable/environmental-sensor-telemetry-dataset/input)
+Available at: [Data set](https://www.kaggle.com/code/rjconstable/environmental-sensor-telemetry-dataset/input)
 
 Each record is time-stamped and includes measurements such as:
 - Temperature  
@@ -61,7 +61,6 @@ The system consists of:
 5. **Automated startup via `docker compose up`**
 
 ## How to Run
-
 ### Prerequisites
 - Docker
 - Docker Compose
@@ -110,8 +109,7 @@ The system consists of:
 ## Docker Configuration
 - Dockerfile
 - docker-compose.yml - Orchestrates MongoDB + Python loader
-- Volumes - Presists MongoDB data between restarts
-
+- Volumes - Persists MongoDB data between restarts
 
 ## Notes
 This project was developed as part of a Data Engineering portfolio assignment. The focus is on portability, scalability, and maintainability rather than real-time streaming or front-end visualization.
@@ -119,7 +117,7 @@ This project was developed as part of a Data Engineering portfolio assignment. T
 ## Author
 Jaco Venter
 
-BSc Data Science student at International University of Applied Scinece (Germany)
+BSc Data Science student at International University of Applied Science (Germany)
 
 [LinkedIn Profile](https://www.linkedin.com/in/jaco-venter-45502a162/)
 
