@@ -99,11 +99,13 @@ The system consists of:
    ```
 
 ## Troubleshooting
-Problem	                        Solution
-Connection refused	            Wait 10 seconds for MongoDB to fully start
-File not found	                  Ensure CSV is in data/ folder with correct name
-Port 27017 already in use   	   Stop any local MongoDB: sudo service mongod stop
-Permission denied	               On Linux, you may need sudo for docker commands
+
+| Problem | Solution |
+|---------|----------|
+| Connection refused | Wait 10 seconds for MongoDB to fully start |
+| File not found | Ensure CSV is in `data/` folder with correct name |
+| Port 27017 already in use | Stop any local MongoDB: `sudo service mongod stop` |
+| Permission denied | On Linux, you may need `sudo` for docker commands |
 
 ## Docker Configuration
 - Dockerfile
