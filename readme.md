@@ -74,7 +74,7 @@ The system consists of:
    cd iot-environmental-sensor-data-pipeline
    ```
 2. Download the dataset
-   Go to: https://www.kaggle.com/code/rjconstable/environmental-sensor-telemetry-dataset/input
+   Go to: [data set](https://www.kaggle.com/code/rjconstable/environmental-sensor-telemetry-dataset/input)
    Download iot_telemetry_data.csv
    Place the file in the data/ folder
 3. Run the pipline
@@ -119,7 +119,7 @@ Jaco Venter
 
 BSc Data Science student at International University of Applied Scinece (Germany)
 
-https://www.linkedin.com/in/jaco-venter-45502a162/
+[LinkedIn Profile](https://www.linkedin.com/in/jaco-venter-45502a162/)
 
 ## License
 This project is licensed under the MIT License.
