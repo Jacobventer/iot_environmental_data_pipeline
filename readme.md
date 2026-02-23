@@ -71,19 +71,43 @@ The system consists of:
 1. Clone the repository:
    ```bash
    git clone https://github.com/<your-username>/iot-environmental-sensor-data-pipeline.git
-2. Navigate to the project directory:
-   ```bash
-   cd Documents
-   ```
-3. Start the data pipeline using Docker Compose:
-   ``` bash
    cd iot-environmental-sensor-data-pipeline
+2. Download the dataset
+   Go to: https://www.kaggle.com/code/rjconstable/environmental-sensor-telemetry-dataset/input
+   Download iot_telemetry_data.csv
+   Place the file in the data/ folder
+3. Run the pipline
+   ```bash
+   docker-compose up --build
    ```
-   This command starts a MongoDB container and automatically executes the Python scripts to initialize the database and load the environmental sensor data in batches.
-   To stop the system, press CTRL + C, and optionally remove the containers with:
-   ``` bash
-   docker compose down
+   This will:
+   Start MongoDB
+   Load all 405,184 sensor records automatically
+4. Verify the data loaded
+   Open a new terminal and run:
+   ```bash
+   docker exec -it iot-environmental-sensor-data-pipeline-mongodb-1 mongosh
    ```
+   Then inside MongoDB, run:
+   javascript
+   ```bash
+   show dbs
+   use sensor_db
+   db.sensor_readings.countDocuments()
+   ```
+
+## Troubleshooting
+Problem	                        Solution
+Connection refused	            Wait 10 seconds for MongoDB to fully start
+File not found	                  Ensure CSV is in data/ folder with correct name
+Port 27017 already in use   	   Stop any local MongoDB: sudo service mongod stop
+Permission denied	               On Linux, you may need sudo for docker commands
+
+## Docker Configuration
+- Dockerfile
+- docker-compose.yml - Orchestrates MongoDB + Python loader
+- Volumes - Presists MongoDB data between restarts
+
 
 ## Notes
 This project was developed as part of a Data Engineering portfolio assignment. The focus is on portability, scalability, and maintainability rather than real-time streaming or front-end visualization.
