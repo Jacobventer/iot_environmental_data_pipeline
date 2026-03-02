@@ -1,19 +1,17 @@
 # IoT Environmental Sensor Data Pipeline
 ## Overview
 
-The aim of this project was to build and implement a portable data engineering system.  
-The pipeline should be able to load, store, and manage IoT environmental sensor telemetry data for municipal analysis of a smart city.
+The aim of this project was to design and and implement a portable data engineering system.  
+The pipeline loads, store, and manage IoT environmental sensor telemetry data for municipal smart city analysis.  
 
-Environmental sensor deployments produce large volumes of time-series data. 
-To suppurt future scalability and long term planning, this project provides a Dockerised pipeline.  
-
-
+Environmental sensor deployments generate large volumes of time-series data.  
+To support future scalability and long-term planning, this project provides a Dockerized batch-processing pipeline.  
 
 
 ## Problem Statement
 
 Municipal planners need quality historical environmental data. This can help improve long term city condictions and help with a citizen alterting applicaiton.
-Future sensor structures are unknown so the database must be able to handle a flexible schema.
+Future sensor structures are unknown so the database must be able to handle a flexible schema and alloq easy extension without restructuring the entire system.  
 
 ## Project Structure
 ```bash
@@ -61,9 +59,9 @@ The pipeline consists of:
 1. **Dockerized MongoDB instance**  
 2. **Database initialization script** (`init_db.py`)  
 3. **Data loading script** (`load_data.py`)  
-4. **Batch loading**  
+4. **Batch processing**  
 5. **Automated startup via `docker compose up`**
-6. **Data verification**
+6. **Data verification step**
 
 ## How to Run
 ### Prerequisites
@@ -73,14 +71,16 @@ The pipeline consists of:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/iot-environmental-sensor-data-pipeline.git
-   cd iot-environmental-sensor-data-pipeline
+   git clone https://github.com/Jacobventer/iot_environmental_data_pipeline.git
+   cd iot_environmental_data_pipeline
    ```
+   
 2. Download the dataset  
    Go to: [data set](https://www.kaggle.com/code/rjconstable/environmental-sensor-telemetry-dataset/input)
    Download iot_telemetry_data.csv  
-   Place the file in the data/ folder  
-3. Run the pipline
+   Place the file in the data/ folder
+   
+4. Run the pipline
    ```bash
    docker compose up --build
    ```
@@ -90,7 +90,7 @@ The pipeline consists of:
    - Load all 405 184 records in batches
    - Print total record count
     
-4. Verify the data loaded
+5. Verify the data loaded
    Open a new terminal and run:
    ```bash
    docker exec -it mongodb mongosh
@@ -122,7 +122,8 @@ The focus is on portability, scalability, and maintainability rather than real-t
 ## Author
 Jaco Venter
 
-BSc Data Science student at International University of Applied Science (Germany)
+BSc Data Science 
+International University of Applied Science (Germany)
 
 [LinkedIn Profile](https://www.linkedin.com/in/jaco-venter-45502a162/)
 
