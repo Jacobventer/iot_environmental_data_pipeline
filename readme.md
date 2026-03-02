@@ -1,15 +1,20 @@
 # IoT Environmental Sensor Data Pipeline
 ## Overview
 
-This project implements a portable data engineering system to ingest, store, and manage IoT environmental sensor telemetry data for municipal analysis and citizen alerting. 
-The focus is on modern data engineering practices such as containerization, batch ingestion, and scalable storage.
+The aim of this project was to build and implement a portable data engineering system.  
+The pipeline should be able to load, store, and manage IoT environmental sensor telemetry data for municipal analysis of a smart city.
 
-Environmental sensor deployments produce large volumes of time-series data. To support long-term planning and analytical needs, this project implements a **Dockerized pipeline** that loads environmental sensor data into a **schema-flexible database (MongoDB)** in batches, ensuring future adaptability when new sensors with unknown structures are introduced.
+Environmental sensor deployments produce large volumes of time-series data. 
+To suppurt future scalability and long term planning, this project provides a Dockerised pipeline.  
+Environmental IoT device data in loaded into a schema-flexible dattabase, MongoDB.   
+This will help with future sensor integration of known structured data.  
+
+
 
 ## Problem Statement
 
-Municipal planners require reliable historical insights into environmental conditions, and real-time data availability to alert citizens when thresholds are exceeded. 
-However, sensor structures may vary and evolve in the future, making fixed database schemas impractical. This system addresses schema flexibility, portability, and maintainability.
+Municipal planners need quality historical environmental data. This can help improve long term city condictions and help with a citizen alterting applicaiton.
+Future sensor structures are unknown so the database must be able to handle a flexible schema.
 
 ## Project Structure
 ```bash
@@ -40,30 +45,30 @@ Each record is time-stamped and includes measurements such as:
 - Light intensity  
 - Smoke levels
 
-This dataset closely matches the project’s use case of environmental IoT telemetry.
+Wtth 405,184 entries the dataset closely matches the project’s requirements and use case of environmental IoT telemetry data.
 
 ## Technology Stack
 
 - **MongoDB** – Document-oriented database for schema-flexible storage  
 - **Docker & Docker Compose** – Containerization and environment management  
-- **Python** – Batch data ingestion and database interaction 
+- **Python** – Batch loading
 - **Jupyter Notebook** – Script development and testing  
 - **GitHub** – Version control and documentation
 
 ## System Architecture
 
-The system consists of:
+The pipeline consists of:
 
 1. **Dockerized MongoDB instance**  
 2. **Database initialization script** (`init_db.py`)  
-3. **Data ingestion script** (`load_data.py`)  
-4. **Batch loading from CSV file**  
+3. **Data loading script** (`load_data.py`)  
+4. **Batch loading**  
 5. **Automated startup via `docker compose up`**
+6. **Data verification**
 
 ## How to Run
 ### Prerequisites
-- Docker
-- Docker Compose
+- Docker Desktop installed and running
 
 ### Steps
 
@@ -81,36 +86,39 @@ The system consists of:
    docker compose up --build
    ```
    This will:
-   Start MongoDB
-   Load all 405,184 sensor records automatically
+   - Start MongoDB
+   - Initialize the dataset
+   - Load all 405 184 records in batches
+   - Print total record count
+    
 4. Verify the data loaded
    Open a new terminal and run:
    ```bash
-   docker exec -it iot-environmental-sensor-data-pipeline-mongodb-1 mongosh
+   docker exec -it mongodb mongosh
    ```
    Then inside MongoDB, run:
    ```bashjavascript
-   show dbs
-   use sensor_db
+   use iot_environment
    db.sensor_readings.countDocuments()
    ```
-
+   Expected result:
+   ```code
+   405184
+   ```
+   
 ## Troubleshooting
 
 | Problem | Solution |
 |---------|----------|
+| Docker not running |Start Docker Desktop |
 | Connection refused | Wait 10 seconds for MongoDB to fully start |
 | File not found | Ensure CSV is in `data/` folder with correct name |
 | Port 27017 already in use | Stop any local MongoDB: `sudo service mongod stop` |
-| Permission denied | On Linux, you may need `sudo` for docker commands |
 
-## Docker Configuration
-- Dockerfile
-- docker-compose.yml - Orchestrates MongoDB + Python loader
-- Volumes - Persists MongoDB data between restarts
 
 ## Notes
-This project was developed as part of a Data Engineering portfolio assignment. The focus is on portability, scalability, and maintainability rather than real-time streaming or front-end visualization.
+This project was developed as part of a Data Engineering portfolio assignment.  
+The focus is on portability, scalability, and maintainability rather than real-time streaming or front-end visualization.
 
 ## Author
 Jaco Venter
