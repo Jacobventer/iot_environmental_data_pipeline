@@ -78,7 +78,7 @@ The system consists of:
    Place the file in the data/ folder
 3. Run the pipline
    ```bash
-   docker-compose up --build
+   docker compose up --build
    ```
    This will:
    Start MongoDB
