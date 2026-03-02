@@ -6,8 +6,7 @@ The pipeline should be able to load, store, and manage IoT environmental sensor 
 
 Environmental sensor deployments produce large volumes of time-series data. 
 To suppurt future scalability and long term planning, this project provides a Dockerised pipeline.  
-Environmental IoT device data in loaded into a schema-flexible dattabase, MongoDB.   
-This will help with future sensor integration of known structured data.  
+
 
 
 
