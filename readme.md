@@ -34,7 +34,7 @@ iot-environmental-sensor-data-pipeline/
 
 ## Dataset
 
-The dataset used in this project is the *Environmental Sensor Telemetry Dataset* from Kaggle (405,184 rows × 9 columns).  
+The dataset used in this project is the *Environmental Sensor Telemetry Dataset* from Kaggle (405,184 rows × 9 columns).    
 Available at: [Data set](https://www.kaggle.com/code/rjconstable/environmental-sensor-telemetry-dataset/input)
 
 Each record is time-stamped and includes measurements such as:
@@ -76,10 +76,10 @@ The pipeline consists of:
    git clone https://github.com/<your-username>/iot-environmental-sensor-data-pipeline.git
    cd iot-environmental-sensor-data-pipeline
    ```
-2. Download the dataset
+2. Download the dataset  
    Go to: [data set](https://www.kaggle.com/code/rjconstable/environmental-sensor-telemetry-dataset/input)
-   Download iot_telemetry_data.csv
-   Place the file in the data/ folder
+   Download iot_telemetry_data.csv  
+   Place the file in the data/ folder  
 3. Run the pipline
    ```bash
    docker compose up --build
@@ -116,7 +116,7 @@ The pipeline consists of:
 
 
 ## Notes
-This project was developed as part of a Data Engineering portfolio assignment.  
+This project was developed as part of a Data Engineering portfolio assignment.    
 The focus is on portability, scalability, and maintainability rather than real-time streaming or front-end visualization.
 
 ## Author
