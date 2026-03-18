@@ -1,0 +1,17 @@
+2026-03-18 12:19:41,509 - INFO - Connected to MongoDB
+2026-03-18 12:19:41,509 - INFO - Starting data load
+2026-03-18 12:19:41,564 - INFO - Existing data cleared
+2026-03-18 12:19:42,703 - INFO - Loaded 405184 rows from CSV
+2026-03-18 12:19:48,708 - INFO - Data loading completed
+2026-03-18 12:19:48,875 - INFO - Total records in MongoDB: 405184
+2026-03-18 12:22:11,655 - INFO - Connected to MongoDB
+2026-03-18 12:22:11,656 - INFO - Starting data load
+2026-03-18 12:22:11,708 - INFO - Existing data cleared
+2026-03-18 12:22:12,814 - INFO - Loaded 405184 rows from CSV
+2026-03-18 12:22:19,376 - INFO - Data loading completed
+2026-03-18 12:22:19,541 - INFO - Total records in MongoDB: 405184
+2026-03-18 12:22:22,895 - INFO - Starting analysis
+2026-03-18 12:22:22,896 - INFO - Total alerts: 1776
+2026-03-18 12:22:22,896 - INFO - Warning counts: {'high_temp': 692, 'low_temp': 236, 'high_smoke': 379, 'high_co': 469}
+2026-03-18 12:22:22,896 - INFO - Analysis completed
+2026-03-18 12:22:22,897 - INFO - Visualization completed
