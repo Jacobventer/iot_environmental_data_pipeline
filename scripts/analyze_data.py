@@ -49,7 +49,6 @@ cos = []
 
 
 #Process data
-
 for record in data:
     sensor = record.get("device", "unknown")
 
@@ -61,7 +60,7 @@ for record in data:
     smokes.append(smoke)
     cos.append(co)
 
-    # Temperature alerts
+    #Temperature alerts
     if temp > TEMP_HIGH:
         counts["high_temp"] += 1
         alerts.append({"sensor": sensor, "type": "high_temp", "value": temp})
@@ -82,7 +81,6 @@ for record in data:
 
 
 #Summary stats
-
 summary = {
     "temperature": {
         "avg": sum(temps)/len(temps),
@@ -106,7 +104,6 @@ logging.info("Analysis completed")
 logging.info("Visualization completed")
 
 #Save outputs
-
 os.makedirs("output", exist_ok=True)
 
 with open("output/alerts.json", "w") as f:
