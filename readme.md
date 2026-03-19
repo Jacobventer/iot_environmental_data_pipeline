@@ -100,12 +100,12 @@ Components:
 ## Alerts
 
 Thresholds are used to detect abnormal conditions:
-1. Temperature:
+1. Temperature:  
    - High > 30.4°C
    - Low < 11°C
-2.	Smoke:
+2.	Smoke:  
    - High > 0.042
-3. CO:
+3. CO:  
    -High > 0.012
 
 ## Outputs
