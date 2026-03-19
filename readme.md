@@ -1,8 +1,8 @@
 # IoT Environmental Sensor Data Pipeline
 ## Overview
 
-The aim of this project was to design and and implement a portable data engineering system.  
-The pipeline loads, store, analyseenvironmental telemetry data to support municipal decision making and altert system.
+The aim of this project was to design and implement a portable data engineering system.  
+The pipeline loads, stores, and analyses environmental telemetry data to support municipal decision making and alert system.
 
 Environmental sensor deployments generate large volumes of time-series data.  
 To support future scalability and long-term planning, this project provides a Dockerized batch-processing pipeline.  
@@ -66,7 +66,7 @@ Each record is time-stamped and includes measurements such as:
 - Light intensity  
 - Smoke levels
 
-Wtth 405,184 entries the dataset closely matches the project’s requirements and use case of environmental IoT telemetry data.
+With 405,184 entries the dataset closely matches the project’s requirements and use case of environmental IoT telemetry data.
 
 ## Technology Stack
 
@@ -145,8 +145,8 @@ Thresholds are used to detect abnormal conditions:
    - Print total record count
     
 4. Outputs will be generated in:
-   /outputs
-   /logs
+   outputs/
+   logs/
    
 ## Troubleshooting
 
@@ -159,9 +159,11 @@ Thresholds are used to detect abnormal conditions:
 
 
 ## Notes
-This project was developed as part of a Data Engineering portfolio assignment.    
-This project focuses on building a backend data system.
-The outputs are designed to be integrated into future front-end applications such as dashboards or citizen alert application.
+This project was developed as part of a Data Engineering portfolio assignment.      
+This project focuses on building a backend data system.   
+The system is designed as an information service to support decision-making rather than a real-time critical alert system.  
+The outputs are designed to be integrated into future front-end applications such as dashboards or citizen alert application.  
+
 
 
 ## Author
