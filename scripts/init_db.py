@@ -11,5 +11,8 @@ db = client["iot_environment"]
 #Create collection
 collection = db["sensor_readings"]
 
+collection.create_index("device")
+collection.create_index("ts")
+
 print("MongoDB connection successful.")
 print("Database and collection initialized.")
