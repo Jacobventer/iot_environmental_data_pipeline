@@ -52,9 +52,12 @@ cos = []
 for record in data:
     sensor = record.get("device", "unknown")
 
-    temp = record.get("temp", 0)
-    smoke = record.get("smoke", 0)
-    co = record.get("co", 0)
+    temp = record.get("temp")
+    smoke = record.get("smoke")
+    co = record.get("co")
+    #Skip invalid data
+    if temp is None or smoke is None or co is None:
+        continue
 
     temps.append(temp)
     smokes.append(smoke)
