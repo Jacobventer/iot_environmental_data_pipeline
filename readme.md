@@ -106,7 +106,7 @@ Thresholds are used to detect abnormal conditions:
 2.	Smoke:  
    - High > 0.042
 3. CO:  
-   -High > 0.012
+   - High > 0.012
 
 ## Outputs
 
