@@ -93,7 +93,7 @@ Components:
 3. **Visualisation** (visualize.py)
    - Generates distribution plots for each metric
    - Highlights threshold levels
-4. **Logging & Monitoring
+4. **Logging & Monitoring**
    - Logs pipeline activity in logs/pipeline.log
    - Provides basic health monitoring and error tracking
 
