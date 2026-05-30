@@ -11,7 +11,7 @@ Problem Statement
 
 Municipal planners require quality environmental information to improve long-term city conditions and support future environmental warning systems.
 
-Future sensor structures are unknown, therefore the database must support schema flexibility and easy expansion without requiring major restructuring.
+Future sensor structures are unknown. Therefore, the database must support schema flexibility and easy expansion without requiring major restructuring.
 
 The system should:
 
@@ -105,7 +105,6 @@ System Architecture
 Environmental telemetry is processed using a sequential data pipeline:
 
 CSV → Chunk Loading → MongoDB → Analysis → Monitoring → Dashboard → Planner Review
-
 Components
 1. Database Initialisation (init_db.py)
 Creates MongoDB database and collection
@@ -238,7 +237,6 @@ BSc Data Science
 International University of Applied Science (Germany)
 
 LinkedIn:
-
 https://www.linkedin.com/in/jaco-venter-45502a162/
 
 License
