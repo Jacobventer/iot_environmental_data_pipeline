@@ -1,29 +1,44 @@
-# IoT Environmental Sensor Data Pipeline
-## Overview
+IoT Environmental Sensor Data Pipeline
+Overview
 
-The aim of this project was to design and implement a portable data engineering system.  
-The pipeline loads, stores, and analyses environmental telemetry data to support municipal decision making and alert system.
+The aim of this project was to design and implement a portable data engineering system for municipal environmental monitoring.
 
-Environmental sensor deployments generate large volumes of time-series data.  
-To support future scalability and long-term planning, this project provides a Dockerized batch-processing pipeline.  
+Environmental sensor deployments generate large volumes of telemetry data. Municipal planners require reliable environmental information to support long-term planning and environmental risk identification. This project implements a Dockerized batch-processing pipeline that loads, analyses and visualises environmental sensor telemetry data.
 
+The system is designed as an information service rather than a real-time critical alert system. Its purpose is to support decision-making through environmental monitoring, alerts, system-health reporting and planner-facing outputs.
 
-## Problem Statement
+Problem Statement
 
-Municipal planners need quality historical environmental data. This can help improve long term city condictions and help with a citizen alterting applicaiton.
-Future sensor structures are unknown so the database must be able to handle a flexible schema and allow easy extension without restructuring the entire system.   
+Municipal planners require quality environmental information to improve long-term city conditions and support future environmental warning systems.
+
+Future sensor structures are unknown, therefore the database must support schema flexibility and easy expansion without requiring major restructuring.
 
 The system should:
-- Store large volumes of sensor data efficiently  
-- Handle evolving sensor structures (schema flexibility)  
-- Provide meaningful insights (alerts and summaries)  
-- Support integration with future front-end applications
 
-This project simulates a backend system that enables environmental monitoring and alert generation.
+Store large volumes of sensor data efficiently
+Handle evolving sensor structures
+Provide meaningful insights and environmental alerts
+Monitor pipeline and data-input health
+Support future front-end integration and dashboards
 
+This project simulates a backend environmental information system for municipal use.
 
-## Project Structure
-```bash
+Context of Use
+
+This project models a municipal environmental information service.
+
+Environmental telemetry is processed in recurring batches and analysed to identify abnormal conditions such as high temperature, smoke or carbon monoxide levels.
+
+City planners review the generated dashboard and reports to:
+
+Monitor environmental conditions
+Identify areas requiring investigation
+Review warning patterns
+Monitor data quality and pipeline health
+
+The system does not guarantee real-time accuracy. Missing or delayed data may reduce confidence, but such limitations are acceptable for an information service designed to support decision-making.
+
+Project Structure
 iot-environmental-sensor-data-pipeline/
 │
 ├── data/
@@ -39,6 +54,10 @@ iot-environmental-sensor-data-pipeline/
 │   ├── alerts.json
 │   ├── warning_counts.json
 │   ├── summary.json
+│   ├── batch_status.json
+│   ├── system_health.json
+│   ├── municipal_report.json
+│   ├── municipal_dashboard.html
 │   ├── temp_distribution.png
 │   ├── smoke_distribution.png
 │   └── co_distribution.png
@@ -50,129 +69,178 @@ iot-environmental-sensor-data-pipeline/
 ├── Dockerfile
 ├── requirements.txt
 └── README.md
+Dataset
 
-```
+This project uses the Environmental Sensor Telemetry Dataset from Kaggle.
 
-## Dataset
+Dataset size:
 
-The dataset used in this project is the *Environmental Sensor Telemetry Dataset* from Kaggle (405,184 rows × 9 columns).    
+405,184 rows
+9 columns
 
-Available at: [Data set](https://www.kaggle.com/code/rjconstable/environmental-sensor-telemetry-dataset/input)
+Available at:
 
-Each record is time-stamped and includes measurements such as:
-- Temperature  
-- Humidity  
-- Carbon monoxide  
-- Light intensity  
-- Smoke levels
+https://www.kaggle.com/code/rjconstable/environmental-sensor-telemetry-dataset/input
 
-With 405,184 entries the dataset closely matches the project’s requirements and use case of environmental IoT telemetry data.
+The dataset includes:
 
-## Technology Stack
+Temperature
+Humidity
+Carbon monoxide
+Light intensity
+Smoke levels
+Time-stamped telemetry readings
 
-- **MongoDB** – Document-oriented database for schema-flexible storage  
-- **Docker & Docker Compose** – Containerization and environment management  
-- **Python** – Batch loading
-- **Matplotlib** – Data visualization
-- **GitHub** – Version control and documentation
+The dataset closely matches the environmental monitoring use case of this project.
 
-## System Architecture
+Technology Stack
+MongoDB – Schema-flexible document database
+Docker & Docker Compose – Portable deployment and orchestration
+Python – Data loading and analysis
+Pandas – Batch and chunk processing
+Matplotlib – Visualisation
+GitHub – Version control and documentation
+System Architecture
 
-CSV → Data Loading → MongoDB → Analysis → Visualization → Outputs
+Environmental telemetry is processed using a sequential data pipeline:
 
-Components:
-1. **Data loader** (load_data.py)
-   - Loads CSV data into MongoDB in batches
-   - Includes retry logic for database connection
-   - Logs pipeline execution
-2. **Data Analysis** (analyze_data.py)
-   - Applies environmental thresholds
-   - Generates alerts for abnormal conditions
-   - Computes summary statistics
-   - Counts warning events
-3. **Visualisation** (visualize.py)
-   - Generates distribution plots for each metric
-   - Highlights threshold levels
-4. **Logging & Monitoring**
-   - Logs pipeline activity in logs/pipeline.log
-   - Provides basic health monitoring and error tracking
+CSV → Chunk Loading → MongoDB → Analysis → Monitoring → Dashboard → Planner Review
 
-## Alerts
+Components
+1. Database Initialisation (init_db.py)
+Creates MongoDB database and collection
+Creates indexes for improved access
+2. Data Loading (load_data.py)
+Loads CSV using chunk loading
+Processes data in batches of 10 000 records
+Validates missing values
+Skips invalid records
+Implements retry logic for MongoDB failures
+Creates loading and health outputs
+3. Analysis (analyze_data.py)
+Processes MongoDB data sequentially
+Applies environmental thresholds
+Generates alerts
+Computes summary statistics
+Produces planner-facing municipal reports
+4. Visualisation (visualize.py)
 
-Thresholds are used to detect abnormal conditions:
-1. Temperature:  
-   - High > 30.4°C
-   - Low < 11°C
-2.	Smoke:
-   - High > 0.042
-3. CO:  
-   - High > 0.012
+Creates a municipal dashboard containing:
 
-## Outputs
+Planner message
+Recommended action
+Latest alert
+Alert counts
+Top alert sensors
+Data-input health
+Batch-processing status
+Supporting visualisations
+5. Monitoring and Logging
 
-1. Alerts - output/alerts.json
-2. Warning counts - output/warning_counts.json
-3. Summary statistics - output/summary.json
-4. Visualization - output/temp_distribution.png, output/smoke_distribution.png, output/co_distribution.png
-5. Logs - logs/pipeline.log
+Pipeline health monitoring includes:
 
+Batch tracking
+Invalid record monitoring
+MongoDB connection monitoring
+Logging via pipeline.log
+Environmental Alerts
 
-## How to Run
-### Prerequisites
-- Docker Desktop installed and running
+Thresholds are used to detect abnormal environmental conditions.
 
-### Steps
+Temperature
+High > 30.4°C
+Low < 11°C
+Smoke
+High > 0.042
+Carbon Monoxide
+High > 0.012
+Outputs
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Jacobventer/iot_environmental_data_pipeline.git
-   cd iot_environmental_data_pipeline
-   ```
-   
-2. Download the dataset  
-   Go to: [data set](https://www.kaggle.com/code/rjconstable/environmental-sensor-telemetry-dataset/input)
-   Download iot_telemetry_data.csv  
-   Place the file in the data/folder
-   
-3. Run the pipline
-   ```bash
-   docker compose up --build
-   ```
-   This will:
-   - Start MongoDB
-   - Initialize the dataset
-   - Load all 405 184 records in batches
-   - Print total record count
-    
-4. Outputs will be generated in:
-   outputs/
-   logs/
-   
-## Troubleshooting
+The pipeline produces the following outputs.
 
-| Problem | Solution |
-|---------|----------|
-| Docker not running |Start Docker Desktop |
-| Connection refused | Wait 10 seconds for MongoDB to fully start |
-| File not found | Ensure CSV is in `data/` folder with correct name |
-| Port 27017 already in use | Stop any local MongoDB: `sudo service mongod stop` |
+Operational Outputs
+alerts.json – Individual environmental alerts
+warning_counts.json – Alert frequency summary
+summary.json – Statistical summaries
+municipal_report.json – Planner-facing information service output
+Monitoring Outputs
+batch_status.json – Batch progress and loading status
+system_health.json – Pipeline and data-input health
+logs/pipeline.log – System activity and troubleshooting
+Dashboard and Visualisations
+municipal_dashboard.html – Planner dashboard
+temp_distribution.png
+smoke_distribution.png
+co_distribution.png
+How to Run
+Prerequisites
+Docker Desktop installed and running
+Steps
+1. Clone the Repository
+git clone https://github.com/Jacobventer/iot_environmental_data_pipeline.git
+cd iot_environmental_data_pipeline
+2. Download Dataset
 
+Download:
 
-## Notes
-This project was developed as part of a Data Engineering portfolio assignment.      
-This project focuses on building a backend data system.   
-The system is designed as an information service to support decision-making rather than a real-time critical alert system.  
-The outputs are designed to be integrated into future front-end applications such as dashboards or citizen alert application.  
+iot_telemetry_data.csv
 
+from:
 
+https://www.kaggle.com/code/rjconstable/environmental-sensor-telemetry-dataset/input
 
-## Author
+Place the file inside:
+
+data/
+3. Run the Pipeline
+docker compose up --build
+
+This will:
+
+Start MongoDB
+Initialise the database
+Load data using chunk processing
+Analyse environmental conditions
+Generate monitoring outputs
+Create the municipal dashboard
+4. View Outputs
+
+Generated in:
+
+output/
+logs/
+
+Open:
+
+output/municipal_dashboard.html
+
+to view the planner dashboard.
+
+Troubleshooting
+Problem	Solution
+Docker not running	Start Docker Desktop
+Connection refused	Wait for MongoDB startup
+File not found	Verify CSV location and filename
+Port 27017 in use	Stop local MongoDB instance
+Notes
+
+This project was developed as part of a Data Engineering portfolio assignment.
+
+The project focuses on portable backend environmental monitoring and municipal information services.
+
+The system is designed to support decision-making and does not represent a real-time critical infrastructure system.
+
+Author
+
 Jaco Venter
 
-BSc Data Science 
+BSc Data Science
 International University of Applied Science (Germany)
 
-[LinkedIn Profile](https://www.linkedin.com/in/jaco-venter-45502a162/)
+LinkedIn:
 
-## License
+https://www.linkedin.com/in/jaco-venter-45502a162/
+
+License
+
 This project is licensed under the MIT License.
