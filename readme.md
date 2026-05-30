@@ -78,24 +78,23 @@ iot-environmental-sensor-data-pipeline/
 This project uses the Environmental Sensor Telemetry Dataset from Kaggle.
 
 Dataset size:
-
-405,184 rows
-9 columns
-
-Available at:
-
+405,184 rows  
+9 columns  
+  
+Available at:  
+  
 https://www.kaggle.com/code/rjconstable/environmental-sensor-telemetry-dataset/input
-
-The dataset includes:
-
-Temperature
-Humidity
-Carbon monoxide
-Light intensity
-Smoke levels
-Time-stamped telemetry readings
-
-The dataset closely matches the environmental monitoring use case of this project.
+  
+The dataset includes:  
+  
+- Temperature
+- Humidity
+- Carbon monoxide
+- Light intensity
+- Smoke levels
+- Time-stamped telemetry readings
+  
+The dataset closely matches the environmental monitoring use case of this project.  
 
 ## Technology Stack
 - MongoDB – Schema-flexible document database
@@ -106,11 +105,11 @@ The dataset closely matches the environmental monitoring use case of this projec
 - GitHub – Version control and documentation
 
 ## System Architecture
-
-Environmental telemetry is processed using a sequential data pipeline:
-
-CSV → Chunk Loading → MongoDB → Analysis → Monitoring → Dashboard → Planner Review
-
+  
+Environmental telemetry is processed using a sequential data pipeline: 
+  
+CSV → Chunk Loading → MongoDB → Analysis → Monitoring → Dashboard → Planner Review  
+  
 ### Components   
 1. Database Initialisation (init_db.py)
 - Creates MongoDB database and collection
