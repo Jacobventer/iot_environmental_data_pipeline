@@ -39,36 +39,36 @@ Monitor data quality and pipeline health
 The system does not guarantee real-time accuracy. Missing or delayed data may reduce confidence, but such limitations are acceptable for an information service designed to support decision-making.
 
 ## Project Structure
-iot-environmental-sensor-data-pipeline/
-│
-├── data/
-│   └── iot_telemetry_data.csv
-│
-├── scripts/
-│   ├── init_db.py
-│   ├── load_data.py
-│   ├── analyze_data.py
-│   └── visualize.py
-│
-├── output/
-│   ├── alerts.json
-│   ├── warning_counts.json
-│   ├── summary.json
-│   ├── batch_status.json
-│   ├── system_health.json
-│   ├── municipal_report.json
-│   ├── municipal_dashboard.html
-│   ├── temp_distribution.png
-│   ├── smoke_distribution.png
-│   └── co_distribution.png
-│
-├── logs/
-│   └── pipeline.log
-│
-├── docker-compose.yml
-├── Dockerfile
-├── requirements.txt
-└── README.md  
+iot-environmental-sensor-data-pipeline/  
+│  
+├── data/   
+│   └── iot_telemetry_data.csv  
+│  
+├── scripts/  
+│   ├── init_db.py  
+│   ├── load_data.py  
+│   ├── analyze_data.py  
+│   └── visualize.py  
+│  
+├── output/  
+│   ├── alerts.json  
+│   ├── warning_counts.json  
+│   ├── summary.json  
+│   ├── batch_status.json  
+│   ├── system_health.json  
+│   ├── municipal_report.json  
+│   ├── municipal_dashboard.html  
+│   ├── temp_distribution.png  
+│   ├── smoke_distribution.png  
+│   └── co_distribution.png  
+│  
+├── logs/  
+│   └── pipeline.log  
+│  
+├── docker-compose.yml  
+├── Dockerfile  
+├── requirements.txt  
+└── README.md    
   
 ## Dataset
 
