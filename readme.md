@@ -209,7 +209,9 @@ Place the file inside:
 data/  
 
 ### 3. Run the Pipeline
+```
 docker compose up --build
+```
 
 This will:
 
