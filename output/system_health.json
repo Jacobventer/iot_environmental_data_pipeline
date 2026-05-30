@@ -1,0 +1,7 @@
+{
+    "pipeline_status": "healthy",
+    "mongodb_connection": "connected",
+    "failed_batches": 0,
+    "invalid_records": 0,
+    "last_successful_run": "2026-05-30 07:18:58"
+}
