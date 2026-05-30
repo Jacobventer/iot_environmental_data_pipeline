@@ -32,13 +32,15 @@ Environmental telemetry is processed in recurring batches and analysed to identi
 
 City planners review the generated dashboard and reports to:
 
-Monitor environmental conditions
-Identify areas requiring investigation
-Review warning patterns
-Monitor data quality and pipeline health
+- Monitor environmental conditions
+- Identify areas requiring investigation
+- Send out mainanace teams
+- Review warning patterns
+- Monitor data quality and pipeline health
 
 The system does not guarantee real-time accuracy. Missing or delayed data may reduce confidence, but such limitations are acceptable for an information service designed to support decision-making.
 
+  
 ## Project Structure
 iot-environmental-sensor-data-pipeline/  
 │  
