@@ -132,7 +132,7 @@ CSV → Chunk Loading → MongoDB → Analysis → Monitoring → Dashboard → 
   
 4. Visualisation (visualize.py)
 
-Creates a municipal dashboard containing:
+  Creates a municipal dashboard containing:
 
 - Planner message
 - Recommended action
