@@ -231,11 +231,11 @@ output/municipal_dashboard.html
 to view the planner dashboard.
 
 ## Troubleshooting
-Problem	Solution
-Docker not running	Start Docker Desktop
-Connection refused	Wait for MongoDB startup
-File not found	Verify CSV location and filename
-Port 27017 in use	Stop local MongoDB instance
+| Problem |	Solution |
+|Docker not running	| Start Docker Desktop |
+|Connection refused |	Wait for MongoDB startup |
+|File not found | Verify CSV location and filename |
+|Port 27017 in use	| Stop local MongoDB instance |
 
 ## Notes
 
