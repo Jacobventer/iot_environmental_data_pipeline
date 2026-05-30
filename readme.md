@@ -215,12 +215,14 @@ docker compose up --build
 
 This will:
 
-Start MongoDB
-Initialise the database
-Load data using chunk processing
-Analyse environmental conditions
-Generate monitoring outputs
-Create the municipal dashboard
+- Start MongoDB
+- Initialise the database
+- Load data using chunk processing
+- Analyse environmental conditions
+- Generate monitoring outputs
+- Create the municipal dashboard
+
+  
 ### 4. View Outputs
 
 Generated in:  
