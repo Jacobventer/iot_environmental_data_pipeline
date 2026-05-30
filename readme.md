@@ -9,23 +9,24 @@ The system is designed as an information service rather than a real-time critica
 
 ## Problem Statement
 
-Municipal planners require quality environmental information to improve long-term city conditions and support future environmental warning systems.
+Municipal planners require quality environmental information to improve long-term city conditions and support future environmental warning systems.  
 
-Future sensor structures are unknown. Therefore, the database must support schema flexibility and easy expansion without requiring major restructuring.
+Future sensor structures are unknown. Therefore, the database must support schema flexibility and easy expansion without requiring major restructuring.  
 
-## The system should:
+## The system should:  
 
-Store large volumes of sensor data efficiently
-Handle evolving sensor structures
-Provide meaningful insights and environmental alerts
-Monitor pipeline and data-input health
-Support future front-end integration and dashboards
+- Store large volumes of sensor data efficiently
+- Handle evolving sensor structures
+- Provide meaningful insights and environmental alerts
+- Monitor pipeline and data-input health
+- Support future front-end integration and dashboards
 
-This project simulates a backend environmental information system for municipal use.
+  
+This project simulates a backend environmental information system for municipal use.  
 
-## Context of Use
+## Context of Use  
 
-This project models a municipal environmental information service.
+This project models a municipal environmental information service.  
 
 Environmental telemetry is processed in recurring batches and analysed to identify abnormal conditions such as high temperature, smoke or carbon monoxide levels.
 
