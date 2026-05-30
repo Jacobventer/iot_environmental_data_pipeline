@@ -156,17 +156,17 @@ Pipeline health monitoring includes:
 
 Thresholds are used to detect abnormal environmental conditions.
 
-Temperature
+### Temperature
 - High > 30.4°C
 - Low < 11°C
-- Smoke
+### Smoke
 - High > 0.042
-- Carbon Monoxide
+### Carbon Monoxide
 - High > 0.012
 
 ## Outputs
 
-The pipeline produces the following outputs.
+The pipeline produces the following outputs.  
 
 ### Operational Outputs
 - alerts.json – Individual environmental alerts
