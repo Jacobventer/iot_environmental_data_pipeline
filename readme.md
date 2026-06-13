@@ -14,7 +14,9 @@ Telemetry data is processed every 6 hours in batches. The generated dashboard al
 •	Monitor processing health  
 •	Dispatch maintenance or investigation teams when required  
 This system is intended as an environmental information service and not as a real-time emergency response system.  
+
 ________________________________________
+
 ## Architecture 
 CSV Dataset  
     ↓  
@@ -29,7 +31,9 @@ Monitoring & Health Checks
 Municipal Dashboard  
     ↓  
 Planner Review  
+
 ________________________________________
+
 ## Components  
 ### init_db.py  
 •	Creates the MongoDB database  
@@ -51,7 +55,9 @@ ________________________________________
 •	Creates environmental visualisations  
 •	Generates the municipal dashboard  
 •	Displays alerts, health information and batch status  
+
 ________________________________________
+
 ## Dashboard Features  
 The dashboard provides:  
 •	Planner messages  
@@ -63,7 +69,9 @@ The dashboard provides:
 •	Data-input health  
 •	Batch-processing status  
 •	Environmental visualisations  
+
 ________________________________________
+
 ## Outputs  
 ### Operational Outputs  
 •	alerts.json  
@@ -79,7 +87,9 @@ ________________________________________
 •	temp_distribution.png  
 •	smoke_distribution.png  
 •	co_distribution.png  
+
 ________________________________________
+
 ## Technology Stack  
 •	Python  
 •	MongoDB  
@@ -87,7 +97,9 @@ ________________________________________
 •	Docker Compose  
 •	Pandas  
 •	Matplotlib  
+
 ________________________________________
+
 ## Running the Project  
 ### 1. Clone the Repository  
 
@@ -95,7 +107,8 @@ ________________________________________
 git clone https://github.com/Jacobventer/iot_environmental_data_pipeline.git  
 
 cd iot_environmental_data_pipeline
-```  
+```
+
 ### 2. Download the Dataset    
 Download:  
 iot_telemetry_data.csv  
@@ -103,6 +116,7 @@ from:
 https://www.kaggle.com/code/rjconstable/environmental-sensor-telemetry-dataset/input  
 Place the file in:  
 data/  
+
 ### 3. Run the Pipeline  
 docker compose up –build  
 The pipeline will:  
@@ -111,11 +125,16 @@ The pipeline will:
 •	Generate alerts  
 •	Perform monitoring checks  
 •	Create dashboard outputs  
+
 ### 4. View the Dashboard  
+
 Open:  
 output/municipal_dashboard.html  
+
 ________________________________________
+
 ## Repository Structure
+
 iot_environmental_data_pipeline/  
 │
 ├── data/  
@@ -134,6 +153,8 @@ iot_environmental_data_pipeline/
 ├── Dockerfile  
 ├── requirements.txt  
 └── README.md  
+
+________________________________________
  
 ## Author  
 Jaco Venter  
