@@ -167,7 +167,8 @@ data/
 ```
 docker compose up –build  
 ```
-The pipeline will:  
+The pipeline will: 
+
 •	Initialise MongoDB  
 •	Load telemetry data  
 •	Generate alerts  
