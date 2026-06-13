@@ -56,7 +56,7 @@ ________________________________________
 CSV Dataset  
     ↓  
 Chunk Loading (10,000 records)  
-    ↓
+    ↓  
 MongoDB  
     ↓  
 Analysis & Alert Generation  
