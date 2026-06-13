@@ -26,6 +26,30 @@ This system is intended as an environmental information service and not as a rea
 
 ________________________________________
 
+## Repository Structure
+
+iot_environmental_data_pipeline/  
+│
+├── data/  
+│   └── iot_telemetry_data.csv  
+│  
+├── scripts/  
+│   ├── init_db.py  
+│   ├── load_data.py  
+│   ├── analyze_data.py  
+│   └── visualize.py  
+│  
+├── output/  
+├── logs/  
+│  
+├── docker-compose.yml  
+├── Dockerfile  
+├── requirements.txt  
+└── README.md  
+
+
+________________________________________
+
 ## Architecture 
 
 CSV Dataset  
@@ -156,28 +180,7 @@ output/municipal_dashboard.html
 
 ________________________________________
 
-## Repository Structure
 
-iot_environmental_data_pipeline/  
-│
-├── data/  
-│   └── iot_telemetry_data.csv  
-│  
-├── scripts/  
-│   ├── init_db.py  
-│   ├── load_data.py  
-│   ├── analyze_data.py  
-│   └── visualize.py  
-│  
-├── output/  
-├── logs/  
-│  
-├── docker-compose.yml  
-├── Dockerfile  
-├── requirements.txt  
-└── README.md  
-
-________________________________________
  
 ## Author  
 
