@@ -54,17 +54,17 @@ ________________________________________
 ## Architecture 
 
 CSV Dataset  
-    ↓  
+       ↓  
 Chunk Loading (10,000 records)  
-    ↓  
+       ↓  
 MongoDB  
-    ↓  
+       ↓  
 Analysis & Alert Generation  
-    ↓  
+       ↓  
 Monitoring & Health Checks  
-    ↓  
+       ↓  
 Municipal Dashboard  
-    ↓  
+       ↓  
 Planner Review  
 
 ________________________________________
