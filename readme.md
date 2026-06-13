@@ -12,12 +12,14 @@ ________________________________________
 Environmental sensors are deployed throughout the Kungwini municipality and collect measurements at regular intervals.  
 
 Telemetry data is processed every 6 hours in batches. The generated dashboard allows city planners to:  
+
 •	Monitor environmental conditions  
 •	Review environmental alerts  
 •	Identify sensors requiring investigation  
 •	Monitor data quality  
 •	Monitor processing health  
 •	Dispatch maintenance or investigation teams when required  
+
 This system is intended as an environmental information service and not as a real-time emergency response system.  
 
 ________________________________________
@@ -65,6 +67,7 @@ ________________________________________
 
 ## Dashboard Features  
 The dashboard provides:  
+
 •	Planner messages  
 •	Recommended actions  
 •	Data-quality information  
