@@ -40,6 +40,57 @@ City planners review the generated dashboard and reports to:
 
 The system does not guarantee real-time accuracy. Missing or delayed data may reduce confidence, but such limitations are acceptable for an information service designed to support decision-making.
 
+## Operational Scenario
+
+This project models an environmental information service for the
+Kungwini municipality.
+
+Environmental sensors such as smoke, carbon monoxide and temperature
+sensors are deployed throughout the city and collect measurements at
+regular intervals. The telemetry data is processed every 6 hours in
+batches of 10,000 records and loaded into MongoDB.
+
+After processing, the system generates alerts, summaries and updates
+the municipal dashboard. City planners review the dashboard to monitor
+environmental conditions, identify warning sensors and review alert
+patterns. Repeated alerts from a sensor may indicate environmental
+conditions that require investigation. In these cases, maintenance or
+investigation teams can be sent to inspect the affected area.
+
+The dashboard also displays data-input health and batch-processing
+health so that planners can identify missing data, invalid records or
+failed processing before making decisions based on the results.
+
+## Batch Processing Strategy
+
+The dataset contains approximately 405,000 sensor records. To improve
+scalability and reduce memory usage, data is loaded using chunk
+processing.
+
+The pipeline processes records in batches of 10,000 rows. Each batch is
+validated before loading into MongoDB. Invalid records are skipped and
+recorded in the health outputs.
+
+Batch progress is tracked through `batch_status.json`, allowing the
+loading process to be monitored and verified.
+
+## Health Signals
+
+The dashboard provides health information for users who operate the
+system.
+
+The health indicators include:
+
+- MongoDB connection status
+- Failed batch count
+- Invalid record count
+- Data-input health
+- Batch-processing status
+- Last successful processing run
+
+These indicators help planners identify data-quality or processing
+problems before relying on the generated alerts and summaries.
+
   
 ## Project Structure
 iot-environmental-sensor-data-pipeline/  
