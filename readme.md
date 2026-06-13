@@ -1,11 +1,16 @@
 # IoT Environmental Data Pipeline
 ## Overview
 This project implements a portable environmental monitoring pipeline for a municipal information service.  
+
 Environmental sensor telemetry is loaded into MongoDB, analysed for abnormal conditions and transformed into planner-facing outputs. The system generates environmental alerts, monitoring information and a dashboard to support municipal decision-making.  
+
 This project was developed as part of a Data Engineering portfolio assignment.  
+
 ________________________________________
+
 ## Operational Scenario
 Environmental sensors are deployed throughout the Kungwini municipality and collect measurements at regular intervals.  
+
 Telemetry data is processed every 6 hours in batches. The generated dashboard allows city planners to:  
 •	Monitor environmental conditions  
 •	Review environmental alerts  
@@ -110,10 +115,13 @@ cd iot_environmental_data_pipeline
 ```
 
 ### 2. Download the Dataset    
+
 Download:  
 iot_telemetry_data.csv  
+
 from:  
 https://www.kaggle.com/code/rjconstable/environmental-sensor-telemetry-dataset/input  
+
 Place the file in:  
 data/  
 
