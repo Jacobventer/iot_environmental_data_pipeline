@@ -10,7 +10,8 @@ This project was developed as part of a Data Engineering portfolio assignment.
 ________________________________________
 
 ## Operational Scenario
-Environmental sensors are deployed throughout the Kungwini municipality and collect measurements at regular intervals.  
+Environmental sensors are deployed throughout the Kungwini municipality.
+Sensor measurements are collected continuously and processed every 6 hours in batches.
 
 Telemetry data is processed every 6 hours in batches. 
 The generated dashboard allows city planners to:  
