@@ -180,7 +180,7 @@ iot_environmental_data_pipeline/
 ________________________________________
  
 ## Author  
+
 Jaco Venter  
 BSc Data Science  
-International University of Applied Sciences (IU)  
-
+[LinkedIn Profile](https://www.linkedin.com/in/jaco-venter-45502a162/) 
