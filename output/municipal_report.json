@@ -1,0 +1,8 @@
+{
+    "service_status": "warning",
+    "planner_message": "Environmental warnings detected.",
+    "alerts_detected": 1776,
+    "invalid_records": 0,
+    "recommended_action": "Review alert areas and continue environmental monitoring.",
+    "data_quality_message": "No missing or invalid sensor values detected."
+}
