@@ -2,7 +2,7 @@
 ## Overview
 This project implements a portable environmental monitoring pipeline for a municipal information service.  
 
-Environmental sensor telemetry is loaded into MongoDB, analysed for abnormal conditions and transformed into a dashboard. 
+Environmental sensor telemetry data is loaded into MongoDB, analysed for abnormal conditions and transformed into a dashboard. 
 The system generates environmental alerts, monitoring information and a dashboard to help Kungwini municipal city planners.  
 
 This project was developed as part of a Data Engineering portfolio assignment.  
