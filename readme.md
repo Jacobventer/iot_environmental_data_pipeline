@@ -10,21 +10,21 @@ This project was developed as part of a Data Engineering portfolio assignment.
 ________________________________________
 
 ## Operational Scenario
-Environmental sensors are deployed throughout the Kungwini municipality.
-Sensor measurements are assumed to be collected continuously.
-In the intended operational scenario, telemetry data would be processed every 6 hours in batches.
+Environmental sensors are deployed throughout the Kungwini municipality and collect measurements at regular intervals.  
 
-Telemetry data is processed every 6 hours in batches. 
-The generated dashboard allows city planners to:  
+The municipal environmental team operates the pipeline every 6 hours to load newly collected telemetry data into the system.
+During each execution, the new sensor data is processed in batches of 10,000 records and the dashboard is updated with the latest environmental alerts, monitoring information and health indicators.
 
-•	Monitor environmental conditions  
-•	Review environmental alerts  
-•	Identify sensors requiring investigation  
-•	Monitor data quality  
-•	Monitor processing health  
-•	Dispatch maintenance or investigation teams when required  
+The generated dashboard allows city planners to:
 
-This system is intended as an environmental information service and not as a real-time emergency response system.  
+Monitor environmental conditions
+Review environmental alerts
+Identify sensors requiring investigation
+Monitor data quality
+Monitor processing health
+Dispatch maintenance or investigation teams when required
+
+This system is intended as an environmental information service and not as a real-time emergency response system.
 
 ________________________________________
 
