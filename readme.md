@@ -1,315 +1,142 @@
-# IoT Environmental Sensor Data Pipeline
+# IoT Environmental Data Pipeline
 ## Overview
-
-The aim of this project was to design and implement a portable data engineering system for municipal environmental monitoring.
-
-Environmental sensor deployments generate large volumes of telemetry data. Municipal planners require reliable environmental information to support long-term planning and environmental risk identification. This project implements a Dockerized batch-processing pipeline that loads, analyses and visualises environmental sensor telemetry data.
-
-The system is designed as an information service rather than a real-time critical alert system. Its purpose is to support decision-making through environmental monitoring, alerts, system-health reporting and planner-facing outputs.
-
-## Problem Statement
-
-Municipal planners require quality environmental information to improve long-term city conditions and support future environmental warning systems.  
-
-Future sensor structures are unknown. Therefore, the database must support schema flexibility and easy expansion without requiring major restructuring.  
-
-## The system should:  
-
-- Store large volumes of sensor data efficiently
-- Handle evolving sensor structures
-- Provide meaningful insights and environmental alerts
-- Monitor pipeline and data-input health
-- Support future front-end integration and dashboards
-
-  
-This project simulates a backend environmental information system for municipal use.  
-
-## Context of Use  
-
-This project models a municipal environmental information service.  
-
-Environmental telemetry is processed in recurring batches and analysed to identify abnormal conditions such as high temperature, smoke or carbon monoxide levels.
-
-City planners review the generated dashboard and reports to:
-
-- Monitor environmental conditions
-- Identify areas requiring investigation
-- Send out mainanace teams
-- Review warning patterns
-- Monitor data quality and pipeline health
-
-The system does not guarantee real-time accuracy. Missing or delayed data may reduce confidence, but such limitations are acceptable for an information service designed to support decision-making.
-
+This project implements a portable environmental monitoring pipeline for a municipal information service.
+Environmental sensor telemetry is loaded into MongoDB, analysed for abnormal conditions and transformed into planner-facing outputs. The system generates environmental alerts, monitoring information and a dashboard to support municipal decision-making.
+This project was developed as part of a Data Engineering portfolio assignment.
+________________________________________
 ## Operational Scenario
-
-This project models an environmental information service for the
-Kungwini municipality.
-
-Environmental sensors such as smoke, carbon monoxide and temperature
-sensors are deployed throughout the city and collect measurements at
-regular intervals. The telemetry data is processed every 6 hours in
-batches of 10,000 records and loaded into MongoDB.
-
-After processing, the system generates alerts, summaries and updates
-the municipal dashboard. City planners review the dashboard to monitor
-environmental conditions, identify warning sensors and review alert
-patterns. Repeated alerts from a sensor may indicate environmental
-conditions that require investigation. In these cases, maintenance or
-investigation teams can be sent to inspect the affected area.
-
-The dashboard also displays data-input health and batch-processing
-health so that planners can identify missing data, invalid records or
-failed processing before making decisions based on the results.
-
-## Batch Processing Strategy
-
-The dataset contains approximately 405,000 sensor records. To improve
-scalability and reduce memory usage, data is loaded using chunk
-processing.
-
-The pipeline processes records in batches of 10,000 rows. Each batch is
-validated before loading into MongoDB. Invalid records are skipped and
-recorded in the health outputs.
-
-Batch progress is tracked through `batch_status.json`, allowing the
-loading process to be monitored and verified.
-
-## Health Signals
-
-The dashboard provides health information for users who operate the
-system.
-
-The health indicators include:
-
-- MongoDB connection status
-- Failed batch count
-- Invalid record count
-- Data-input health
-- Batch-processing status
-- Last successful processing run
-
-These indicators help planners identify data-quality or processing
-problems before relying on the generated alerts and summaries.
-
-  
-## Project Structure
-iot-environmental-sensor-data-pipeline/  
-│  
-├── data/   
-│   └── iot_telemetry_data.csv  
-│  
-├── scripts/  
-│   ├── init_db.py  
-│   ├── load_data.py  
-│   ├── analyze_data.py  
-│   └── visualize.py  
-│  
-├── output/  
-│   ├── alerts.json  
-│   ├── warning_counts.json  
-│   ├── summary.json  
-│   ├── batch_status.json  
-│   ├── system_health.json  
-│   ├── municipal_report.json  
-│   ├── municipal_dashboard.html  
-│   ├── temp_distribution.png  
-│   ├── smoke_distribution.png  
-│   └── co_distribution.png  
-│  
-├── logs/  
-│   └── pipeline.log  
-│  
-├── docker-compose.yml  
-├── Dockerfile  
-├── requirements.txt  
-└── README.md    
-  
-## Dataset
-
-This project uses the Environmental Sensor Telemetry Dataset from Kaggle.
-
-Dataset size:
-405,184 rows  
-9 columns  
-  
-Available at:  
-  
-https://www.kaggle.com/code/rjconstable/environmental-sensor-telemetry-dataset/input
-  
-The dataset includes:  
-  
-- Temperature
-- Humidity
-- Carbon monoxide
-- Light intensity
-- Smoke levels
-- Time-stamped telemetry readings
-  
-The dataset closely matches the environmental monitoring use case of this project.  
-
-## Technology Stack
-- MongoDB – Schema-flexible document database
-- Docker & Docker Compose – Portable deployment and orchestration
-- Python – Data loading and analysis
-- Pandas – Batch and chunk processing
-- Matplotlib – Visualisation
-- GitHub – Version control and documentation
-
-## System Architecture
-  
-Environmental telemetry is processed using a sequential data pipeline: 
-  
-CSV → Chunk Loading → MongoDB → Analysis → Monitoring → Dashboard → Planner Review  
-  
-### Components   
-1. Database Initialisation (init_db.py)
-- Creates MongoDB database and collection
-- Creates indexes for improved access  
-  
-2. Data Loading (load_data.py)
-- Loads CSV using chunk loading
-- Processes data in batches of 10 000 records
-- Validates missing values
-- Skips invalid records
-- Implements retry logic for MongoDB failures
-- Creates loading and health outputs  
-
-3. Analysis (analyze_data.py)
-- Processes MongoDB data sequentially
-- Applies environmental thresholds
-- Generates alerts
-- Computes summary statistics
-- Produces planner-facing municipal reports  
-  
-4. Visualisation (visualize.py)
-
-  Creates a municipal dashboard containing:
-
-- Planner message
-- Recommended action
-- Latest alert
-- Alert counts
-- Top alert sensors
-- Data-input health
-- Batch-processing status
-- Supporting visualisations  
-  
-5. Monitoring and Logging
-
-Pipeline health monitoring includes:
-
-- Batch tracking
-- Invalid record monitoring
-- MongoDB connection monitoring
-- Logging via pipeline.log
-
-## Environmental Alerts
-
-Thresholds are used to detect abnormal environmental conditions.
-
-### Temperature
-- High > 30.4°C
-- Low < 11°C
-### Smoke
-- High > 0.042
-### Carbon Monoxide
-- High > 0.012
-
+Environmental sensors are deployed throughout the Kungwini municipality and collect measurements at regular intervals.
+Telemetry data is processed every 6 hours in batches. The generated dashboard allows city planners to:
+•	Monitor environmental conditions
+•	Review environmental alerts
+•	Identify sensors requiring investigation
+•	Monitor data quality
+•	Monitor processing health
+•	Dispatch maintenance or investigation teams when required
+This system is intended as an environmental information service and not as a real-time emergency response system.
+________________________________________
+## Architecture
+CSV Dataset
+    ↓
+Chunk Loading (10,000 records)
+    ↓
+MongoDB
+    ↓
+Analysis & Alert Generation
+    ↓
+Monitoring & Health Checks
+    ↓
+Municipal Dashboard
+    ↓
+Planner Review
+________________________________________
+## Components
+### init_db.py
+•	Creates the MongoDB database
+•	Creates the sensor collection
+•	Creates indexes
+### load_data.py
+•	Loads the dataset using chunk processing
+•	Batch size: 10,000 records
+•	Tracks loading status
+•	Tracks invalid records
+•	Generates system-health outputs
+### analyze_data.py
+•	Processes environmental telemetry
+•	Generates alerts
+•	Calculates warning counts
+•	Creates planner-facing recommendations
+•	Generates monitoring outputs
+### visualize.py
+•	Creates environmental visualisations
+•	Generates the municipal dashboard
+•	Displays alerts, health information and batch status
+________________________________________
+## Dashboard Features
+The dashboard provides:
+•	Planner messages
+•	Recommended actions
+•	Data-quality information
+•	Latest environmental alert
+•	Alert counts
+•	Top warning sensors
+•	Data-input health
+•	Batch-processing status
+•	Environmental visualisations
+________________________________________
 ## Outputs
-
-The pipeline produces the following outputs.  
-
 ### Operational Outputs
-- alerts.json – Individual environmental alerts
-- warning_counts.json – Alert frequency summary
-- summary.json – Statistical summaries
-- municipal_report.json – Planner-facing information service output  
-
+•	alerts.json
+•	warning_counts.json
+•	summary.json
+•	municipal_report.json
 ### Monitoring Outputs
-- batch_status.json – Batch progress and loading status
-- system_health.json – Pipeline and data-input health
-- logs/pipeline.log – System activity and troubleshooting  
-
-### Dashboard and Visualisations
-- municipal_dashboard.html – Planner dashboard
-- temp_distribution.png
-- smoke_distribution.png
-- co_distribution.png
-
-
-## How to Run
-### Prerequisites
-Docker Desktop installed and running
-
-### Steps
+•	batch_status.json
+•	system_health.json
+•	pipeline.log
+### Dashboard Outputs
+•	municipal_dashboard.html
+•	temp_distribution.png
+•	smoke_distribution.png
+•	co_distribution.png
+________________________________________
+## Technology Stack
+•	Python
+•	MongoDB
+•	Docker
+•	Docker Compose
+•	Pandas
+•	Matplotlib
+________________________________________
+## Running the Project
 ### 1. Clone the Repository
+
 ```
 git clone https://github.com/Jacobventer/iot_environmental_data_pipeline.git
+
 cd iot_environmental_data_pipeline
 ```
-### 2. Download Dataset 
-
+### 2. Download the Dataset
 Download:
-```
 iot_telemetry_data.csv
-```
-from:  
+from:
 https://www.kaggle.com/code/rjconstable/environmental-sensor-telemetry-dataset/input
-
-Place the file inside:  
-data/  
-
+Place the file in:
+data/
 ### 3. Run the Pipeline
-```
 docker compose up --build
-```
-
-This will:
-
-- Start MongoDB
-- Initialise the database
-- Load data using chunk processing
-- Analyse environmental conditions
-- Generate monitoring outputs
-- Create the municipal dashboard
-
-  
-### 4. View Outputs
-
-Generated in:  
-  
-output/  
-logs/  
-
-Open:  
-```  
-output/municipal_dashboard.html  
-```
-to view the planner dashboard.
-
-## Troubleshooting
-|     Problem       |	   Solution                      |  
-|------|------|
-|Docker not running	| Start Docker Desktop             |  
-|Connection refused |	Wait for MongoDB startup         |  
-|File not found     | Verify CSV location and filename |  
-|Port 27017 in use	| Stop local MongoDB instance      |  
-
-## Notes
-
-This project was developed as part of a Data Engineering portfolio assignment.
-
-The project focuses on portable backend environmental monitoring and municipal information services.
-
-The system is designed to support decision-making and does not represent a real-time critical infrastructure system.
-
+The pipeline will:
+•	Initialise MongoDB
+•	Load telemetry data
+•	Generate alerts
+•	Perform monitoring checks
+•	Create dashboard outputs
+### 4. View the Dashboard
+Open:
+output/municipal_dashboard.html
+________________________________________
+## Repository Structure
+iot_environmental_data_pipeline/
+│
+├── data/
+│   └── iot_telemetry_data.csv
+│
+├── scripts/
+│   ├── init_db.py
+│   ├── load_data.py
+│   ├── analyze_data.py
+│   └── visualize.py
+│
+├── output/
+├── logs/
+│
+├── docker-compose.yml
+├── Dockerfile
+├── requirements.txt
+└── README.md
+________________________________________
 ## Author
-Jaco Venter  
-BSc Data Science  
-International University of Applied Science (Germany)  
+Jaco Venter
+BSc Data Science
+International University of Applied Sciences (IU)
 
-LinkedIn:  
-https://www.linkedin.com/in/jaco-venter-45502a162/  
-
-## License  
-This project is licensed under the MIT License.
