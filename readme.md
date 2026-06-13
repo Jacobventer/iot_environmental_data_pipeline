@@ -2,7 +2,8 @@
 ## Overview
 This project implements a portable environmental monitoring pipeline for a municipal information service.  
 
-Environmental sensor telemetry is loaded into MongoDB, analysed for abnormal conditions and transformed into planner-facing outputs. The system generates environmental alerts, monitoring information and a dashboard to support municipal decision-making.  
+Environmental sensor telemetry is loaded into MongoDB, analysed for abnormal conditions and transformed into a dashboard. 
+The system generates environmental alerts, monitoring information and a dashboard to help Kungwini municipal city planners.  
 
 This project was developed as part of a Data Engineering portfolio assignment.  
 
@@ -11,7 +12,8 @@ ________________________________________
 ## Operational Scenario
 Environmental sensors are deployed throughout the Kungwini municipality and collect measurements at regular intervals.  
 
-Telemetry data is processed every 6 hours in batches. The generated dashboard allows city planners to:  
+Telemetry data is processed every 6 hours in batches. 
+The generated dashboard allows city planners to:  
 
 •	Monitor environmental conditions  
 •	Review environmental alerts  
@@ -25,6 +27,7 @@ This system is intended as an environmental information service and not as a rea
 ________________________________________
 
 ## Architecture 
+
 CSV Dataset  
     ↓  
 Chunk Loading (10,000 records)  
@@ -42,22 +45,26 @@ Planner Review
 ________________________________________
 
 ## Components  
+
 ### init_db.py  
 •	Creates the MongoDB database  
 •	Creates the sensor collection  
 •	Creates indexes  
+
 ### load_data.py
 •	Loads the dataset using chunk processing  
 •	Batch size: 10,000 records  
 •	Tracks loading status  
 •	Tracks invalid records  
 •	Generates system-health outputs  
+
 ### analyze_data.py  
 •	Processes environmental telemetry  
 •	Generates alerts  
 •	Calculates warning counts  
 •	Creates planner-facing recommendations  
 •	Generates monitoring outputs  
+
 ### visualize.py  
 •	Creates environmental visualisations  
 •	Generates the municipal dashboard  
@@ -81,15 +88,18 @@ The dashboard provides:
 ________________________________________
 
 ## Outputs  
+
 ### Operational Outputs  
 •	alerts.json  
 •	warning_counts.json  
 •	summary.json  
 •	municipal_report.json  
+
 ### Monitoring Outputs  
 •	batch_status.json  
 •	system_health.json  
 •	pipeline.log  
+
 ### Dashboard Outputs  
 •	municipal_dashboard.html  
 •	temp_distribution.png  
@@ -108,7 +118,8 @@ ________________________________________
 
 ________________________________________
 
-## Running the Project  
+## Running the Project
+
 ### 1. Clone the Repository  
 
 ```
@@ -121,15 +132,16 @@ cd iot_environmental_data_pipeline
 
 Download:  
 iot_telemetry_data.csv  
-
-from:  
+from: 
 https://www.kaggle.com/code/rjconstable/environmental-sensor-telemetry-dataset/input  
 
 Place the file in:  
 data/  
 
 ### 3. Run the Pipeline  
+```
 docker compose up –build  
+```
 The pipeline will:  
 •	Initialise MongoDB  
 •	Load telemetry data  
