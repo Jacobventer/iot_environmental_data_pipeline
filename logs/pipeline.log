@@ -1,0 +1,322 @@
+2026-05-25 16:41:54,781 - INFO - Connected to MongoDB
+2026-05-25 16:41:54,781 - INFO - Starting data load
+2026-05-25 16:41:57,557 - INFO - Existing data cleared
+2026-05-25 16:41:59,082 - INFO - Inserted batch 1 (10000 valid records)
+2026-05-25 16:41:59,214 - INFO - Inserted batch 2 (10000 valid records)
+2026-05-25 16:41:59,357 - INFO - Inserted batch 3 (10000 valid records)
+2026-05-25 16:41:59,483 - INFO - Inserted batch 4 (10000 valid records)
+2026-05-25 16:41:59,606 - INFO - Inserted batch 5 (10000 valid records)
+2026-05-25 16:41:59,751 - INFO - Inserted batch 6 (10000 valid records)
+2026-05-25 16:41:59,876 - INFO - Inserted batch 7 (10000 valid records)
+2026-05-25 16:42:00,032 - INFO - Inserted batch 8 (10000 valid records)
+2026-05-25 16:42:00,187 - INFO - Inserted batch 9 (10000 valid records)
+2026-05-25 16:42:00,314 - INFO - Inserted batch 10 (10000 valid records)
+2026-05-25 16:42:00,440 - INFO - Inserted batch 11 (10000 valid records)
+2026-05-25 16:42:00,562 - INFO - Inserted batch 12 (10000 valid records)
+2026-05-25 16:42:00,710 - INFO - Inserted batch 13 (10000 valid records)
+2026-05-25 16:42:00,834 - INFO - Inserted batch 14 (10000 valid records)
+2026-05-25 16:42:00,963 - INFO - Inserted batch 15 (10000 valid records)
+2026-05-25 16:42:01,101 - INFO - Inserted batch 16 (10000 valid records)
+2026-05-25 16:42:01,231 - INFO - Inserted batch 17 (10000 valid records)
+2026-05-25 16:42:01,354 - INFO - Inserted batch 18 (10000 valid records)
+2026-05-25 16:42:01,499 - INFO - Inserted batch 19 (10000 valid records)
+2026-05-25 16:42:01,626 - INFO - Inserted batch 20 (10000 valid records)
+2026-05-25 16:42:01,800 - INFO - Inserted batch 21 (10000 valid records)
+2026-05-25 16:42:01,966 - INFO - Inserted batch 22 (10000 valid records)
+2026-05-25 16:42:02,109 - INFO - Inserted batch 23 (10000 valid records)
+2026-05-25 16:42:02,235 - INFO - Inserted batch 24 (10000 valid records)
+2026-05-25 16:42:02,367 - INFO - Inserted batch 25 (10000 valid records)
+2026-05-25 16:42:02,509 - INFO - Inserted batch 26 (10000 valid records)
+2026-05-25 16:42:02,634 - INFO - Inserted batch 27 (10000 valid records)
+2026-05-25 16:42:02,769 - INFO - Inserted batch 28 (10000 valid records)
+2026-05-25 16:42:02,937 - INFO - Inserted batch 29 (10000 valid records)
+2026-05-25 16:42:03,070 - INFO - Inserted batch 30 (10000 valid records)
+2026-05-25 16:42:03,203 - INFO - Inserted batch 31 (10000 valid records)
+2026-05-25 16:42:03,337 - INFO - Inserted batch 32 (10000 valid records)
+2026-05-25 16:42:03,487 - INFO - Inserted batch 33 (10000 valid records)
+2026-05-25 16:42:03,621 - INFO - Inserted batch 34 (10000 valid records)
+2026-05-25 16:42:03,756 - INFO - Inserted batch 35 (10000 valid records)
+2026-05-25 16:42:03,900 - INFO - Inserted batch 36 (10000 valid records)
+2026-05-25 16:42:04,035 - INFO - Inserted batch 37 (10000 valid records)
+2026-05-25 16:42:04,162 - INFO - Inserted batch 38 (10000 valid records)
+2026-05-25 16:42:04,296 - INFO - Inserted batch 39 (10000 valid records)
+2026-05-25 16:42:04,438 - INFO - Inserted batch 40 (10000 valid records)
+2026-05-25 16:42:04,507 - INFO - Inserted batch 41 (5184 valid records)
+2026-05-25 16:42:04,508 - INFO - Data loading completed
+2026-05-25 16:42:04,647 - INFO - Total records in MongoDB: 405184
+2026-05-25 16:42:04,648 - INFO - Invalid records skipped: 0
+2026-05-25 16:42:04,648 - INFO - System health: {'pipeline_status': 'healthy', 'mongodb_connection': 'connected', 'failed_batches': 0, 'invalid_records': 0, 'last_successful_run': '2026-05-25 16:42:04'}
+2026-05-25 16:42:08,624 - INFO - Starting analysis
+2026-05-25 16:42:08,625 - INFO - Total alerts: 1776
+2026-05-25 16:42:08,626 - INFO - Warning counts: {'high_temp': 692, 'low_temp': 236, 'high_smoke': 379, 'high_co': 469}
+2026-05-25 16:42:08,626 - INFO - Invalid records: 0
+2026-05-25 16:42:08,626 - INFO - Analysis completed
+2026-05-25 16:53:18,842 - INFO - Connected to MongoDB
+2026-05-25 16:53:18,842 - INFO - Starting data load
+2026-05-25 16:53:24,491 - INFO - Existing data cleared
+2026-05-25 16:53:24,985 - INFO - Inserted batch 1 (10000 valid records)
+2026-05-25 16:53:25,114 - INFO - Inserted batch 2 (10000 valid records)
+2026-05-25 16:53:25,257 - INFO - Inserted batch 3 (10000 valid records)
+2026-05-25 16:53:25,376 - INFO - Inserted batch 4 (10000 valid records)
+2026-05-25 16:53:25,498 - INFO - Inserted batch 5 (10000 valid records)
+2026-05-25 16:53:25,631 - INFO - Inserted batch 6 (10000 valid records)
+2026-05-25 16:53:25,748 - INFO - Inserted batch 7 (10000 valid records)
+2026-05-25 16:53:25,871 - INFO - Inserted batch 8 (10000 valid records)
+2026-05-25 16:53:26,004 - INFO - Inserted batch 9 (10000 valid records)
+2026-05-25 16:53:26,118 - INFO - Inserted batch 10 (10000 valid records)
+2026-05-25 16:53:26,239 - INFO - Inserted batch 11 (10000 valid records)
+2026-05-25 16:53:26,357 - INFO - Inserted batch 12 (10000 valid records)
+2026-05-25 16:53:26,489 - INFO - Inserted batch 13 (10000 valid records)
+2026-05-25 16:53:26,607 - INFO - Inserted batch 14 (10000 valid records)
+2026-05-25 16:53:26,730 - INFO - Inserted batch 15 (10000 valid records)
+2026-05-25 16:53:26,886 - INFO - Inserted batch 16 (10000 valid records)
+2026-05-25 16:53:27,003 - INFO - Inserted batch 17 (10000 valid records)
+2026-05-25 16:53:27,121 - INFO - Inserted batch 18 (10000 valid records)
+2026-05-25 16:53:27,342 - INFO - Inserted batch 19 (10000 valid records)
+2026-05-25 16:53:27,473 - INFO - Inserted batch 20 (10000 valid records)
+2026-05-25 16:53:27,594 - INFO - Inserted batch 21 (10000 valid records)
+2026-05-25 16:53:27,717 - INFO - Inserted batch 22 (10000 valid records)
+2026-05-25 16:53:27,857 - INFO - Inserted batch 23 (10000 valid records)
+2026-05-25 16:53:27,976 - INFO - Inserted batch 24 (10000 valid records)
+2026-05-25 16:53:28,100 - INFO - Inserted batch 25 (10000 valid records)
+2026-05-25 16:53:28,279 - INFO - Inserted batch 26 (10000 valid records)
+2026-05-25 16:53:28,400 - INFO - Inserted batch 27 (10000 valid records)
+2026-05-25 16:53:28,523 - INFO - Inserted batch 28 (10000 valid records)
+2026-05-25 16:53:28,711 - INFO - Inserted batch 29 (10000 valid records)
+2026-05-25 16:53:28,846 - INFO - Inserted batch 30 (10000 valid records)
+2026-05-25 16:53:28,983 - INFO - Inserted batch 31 (10000 valid records)
+2026-05-25 16:53:29,122 - INFO - Inserted batch 32 (10000 valid records)
+2026-05-25 16:53:29,282 - INFO - Inserted batch 33 (10000 valid records)
+2026-05-25 16:53:29,421 - INFO - Inserted batch 34 (10000 valid records)
+2026-05-25 16:53:29,537 - INFO - Inserted batch 35 (10000 valid records)
+2026-05-25 16:53:29,677 - INFO - Inserted batch 36 (10000 valid records)
+2026-05-25 16:53:29,795 - INFO - Inserted batch 37 (10000 valid records)
+2026-05-25 16:53:29,914 - INFO - Inserted batch 38 (10000 valid records)
+2026-05-25 16:53:30,027 - INFO - Inserted batch 39 (10000 valid records)
+2026-05-25 16:53:30,159 - INFO - Inserted batch 40 (10000 valid records)
+2026-05-25 16:53:30,226 - INFO - Inserted batch 41 (5184 valid records)
+2026-05-25 16:53:30,227 - INFO - Data loading completed
+2026-05-25 16:53:30,366 - INFO - Total records in MongoDB: 405184
+2026-05-25 16:53:30,366 - INFO - Invalid records skipped: 0
+2026-05-25 16:53:30,366 - INFO - System health: {'pipeline_status': 'healthy', 'mongodb_connection': 'connected', 'failed_batches': 0, 'invalid_records': 0, 'last_successful_run': '2026-05-25 16:53:30'}
+2026-05-25 16:53:33,214 - INFO - Starting analysis
+2026-05-25 16:53:33,215 - INFO - Total alerts: 1776
+2026-05-25 16:53:33,215 - INFO - Warning counts: {'high_temp': 692, 'low_temp': 236, 'high_smoke': 379, 'high_co': 469}
+2026-05-25 16:53:33,216 - INFO - Invalid records: 0
+2026-05-25 16:53:33,216 - INFO - Analysis completed
+2026-05-26 13:44:49,155 - INFO - Connected to MongoDB
+2026-05-26 13:44:49,155 - INFO - Starting data load
+2026-05-26 13:44:53,773 - INFO - Existing data cleared
+2026-05-26 13:44:54,304 - INFO - Inserted batch 1 (10000 valid records)
+2026-05-26 13:44:54,522 - INFO - Inserted batch 2 (10000 valid records)
+2026-05-26 13:44:54,721 - INFO - Inserted batch 3 (10000 valid records)
+2026-05-26 13:44:54,989 - INFO - Inserted batch 4 (10000 valid records)
+2026-05-26 13:44:55,852 - INFO - Inserted batch 5 (10000 valid records)
+2026-05-26 13:44:56,062 - INFO - Inserted batch 6 (10000 valid records)
+2026-05-26 13:44:56,263 - INFO - Inserted batch 7 (10000 valid records)
+2026-05-26 13:44:56,471 - INFO - Inserted batch 8 (10000 valid records)
+2026-05-26 13:44:56,747 - INFO - Inserted batch 9 (10000 valid records)
+2026-05-26 13:44:56,921 - INFO - Inserted batch 10 (10000 valid records)
+2026-05-26 13:44:57,167 - INFO - Inserted batch 11 (10000 valid records)
+2026-05-26 13:44:57,355 - INFO - Inserted batch 12 (10000 valid records)
+2026-05-26 13:44:57,679 - INFO - Inserted batch 13 (10000 valid records)
+2026-05-26 13:44:57,873 - INFO - Inserted batch 14 (10000 valid records)
+2026-05-26 13:44:58,096 - INFO - Inserted batch 15 (10000 valid records)
+2026-05-26 13:44:58,282 - INFO - Inserted batch 16 (10000 valid records)
+2026-05-26 13:44:58,480 - INFO - Inserted batch 17 (10000 valid records)
+2026-05-26 13:44:58,695 - INFO - Inserted batch 18 (10000 valid records)
+2026-05-26 13:44:58,935 - INFO - Inserted batch 19 (10000 valid records)
+2026-05-26 13:44:59,133 - INFO - Inserted batch 20 (10000 valid records)
+2026-05-26 13:44:59,421 - INFO - Inserted batch 21 (10000 valid records)
+2026-05-26 13:44:59,611 - INFO - Inserted batch 22 (10000 valid records)
+2026-05-26 13:44:59,887 - INFO - Inserted batch 23 (10000 valid records)
+2026-05-26 13:45:00,043 - INFO - Inserted batch 24 (10000 valid records)
+2026-05-26 13:45:00,307 - INFO - Inserted batch 25 (10000 valid records)
+2026-05-26 13:45:00,546 - INFO - Inserted batch 26 (10000 valid records)
+2026-05-26 13:45:00,781 - INFO - Inserted batch 27 (10000 valid records)
+2026-05-26 13:45:01,011 - INFO - Inserted batch 28 (10000 valid records)
+2026-05-26 13:45:01,599 - INFO - Inserted batch 29 (10000 valid records)
+2026-05-26 13:45:02,120 - INFO - Inserted batch 30 (10000 valid records)
+2026-05-26 13:45:02,396 - INFO - Inserted batch 31 (10000 valid records)
+2026-05-26 13:45:02,604 - INFO - Inserted batch 32 (10000 valid records)
+2026-05-26 13:45:02,856 - INFO - Inserted batch 33 (10000 valid records)
+2026-05-26 13:45:03,060 - INFO - Inserted batch 34 (10000 valid records)
+2026-05-26 13:45:03,245 - INFO - Inserted batch 35 (10000 valid records)
+2026-05-26 13:45:03,445 - INFO - Inserted batch 36 (10000 valid records)
+2026-05-26 13:45:03,979 - INFO - Inserted batch 37 (10000 valid records)
+2026-05-26 13:45:04,259 - INFO - Inserted batch 38 (10000 valid records)
+2026-05-26 13:45:04,582 - INFO - Inserted batch 39 (10000 valid records)
+2026-05-26 13:45:04,771 - INFO - Inserted batch 40 (10000 valid records)
+2026-05-26 13:45:04,920 - INFO - Inserted batch 41 (5184 valid records)
+2026-05-26 13:45:04,921 - INFO - Data loading completed
+2026-05-26 13:45:05,117 - INFO - Total records in MongoDB: 405184
+2026-05-26 13:45:05,117 - INFO - Invalid records skipped: 0
+2026-05-26 13:45:05,117 - INFO - System health: {'pipeline_status': 'healthy', 'mongodb_connection': 'connected', 'failed_batches': 0, 'invalid_records': 0, 'last_successful_run': '2026-05-26 13:45:05'}
+2026-05-26 13:45:08,354 - INFO - Starting analysis
+2026-05-26 13:45:08,355 - INFO - Total alerts: 1776
+2026-05-26 13:45:08,355 - INFO - Warning counts: {'high_temp': 692, 'low_temp': 236, 'high_smoke': 379, 'high_co': 469}
+2026-05-26 13:45:08,356 - INFO - Invalid records: 0
+2026-05-26 13:45:08,356 - INFO - Analysis completed
+2026-05-26 13:54:30,054 - INFO - Connected to MongoDB
+2026-05-26 13:54:30,055 - INFO - Starting data load
+2026-05-26 13:54:37,677 - INFO - Existing data cleared
+2026-05-26 13:54:37,922 - INFO - Inserted batch 1 (10000 valid records)
+2026-05-26 13:54:38,156 - INFO - Inserted batch 2 (10000 valid records)
+2026-05-26 13:54:38,416 - INFO - Inserted batch 3 (10000 valid records)
+2026-05-26 13:54:38,625 - INFO - Inserted batch 4 (10000 valid records)
+2026-05-26 13:54:38,819 - INFO - Inserted batch 5 (10000 valid records)
+2026-05-26 13:54:39,033 - INFO - Inserted batch 6 (10000 valid records)
+2026-05-26 13:54:39,218 - INFO - Inserted batch 7 (10000 valid records)
+2026-05-26 13:54:39,403 - INFO - Inserted batch 8 (10000 valid records)
+2026-05-26 13:54:39,611 - INFO - Inserted batch 9 (10000 valid records)
+2026-05-26 13:54:39,807 - INFO - Inserted batch 10 (10000 valid records)
+2026-05-26 13:54:40,003 - INFO - Inserted batch 11 (10000 valid records)
+2026-05-26 13:54:40,190 - INFO - Inserted batch 12 (10000 valid records)
+2026-05-26 13:54:40,424 - INFO - Inserted batch 13 (10000 valid records)
+2026-05-26 13:54:40,620 - INFO - Inserted batch 14 (10000 valid records)
+2026-05-26 13:54:40,813 - INFO - Inserted batch 15 (10000 valid records)
+2026-05-26 13:54:41,059 - INFO - Inserted batch 16 (10000 valid records)
+2026-05-26 13:54:41,276 - INFO - Inserted batch 17 (10000 valid records)
+2026-05-26 13:54:41,461 - INFO - Inserted batch 18 (10000 valid records)
+2026-05-26 13:54:41,670 - INFO - Inserted batch 19 (10000 valid records)
+2026-05-26 13:54:41,859 - INFO - Inserted batch 20 (10000 valid records)
+2026-05-26 13:54:42,054 - INFO - Inserted batch 21 (10000 valid records)
+2026-05-26 13:54:42,252 - INFO - Inserted batch 22 (10000 valid records)
+2026-05-26 13:54:42,592 - INFO - Inserted batch 23 (10000 valid records)
+2026-05-26 13:54:42,986 - INFO - Inserted batch 24 (10000 valid records)
+2026-05-26 13:54:43,212 - INFO - Inserted batch 25 (10000 valid records)
+2026-05-26 13:54:43,439 - INFO - Inserted batch 26 (10000 valid records)
+2026-05-26 13:54:43,640 - INFO - Inserted batch 27 (10000 valid records)
+2026-05-26 13:54:43,833 - INFO - Inserted batch 28 (10000 valid records)
+2026-05-26 13:54:44,053 - INFO - Inserted batch 29 (10000 valid records)
+2026-05-26 13:54:44,253 - INFO - Inserted batch 30 (10000 valid records)
+2026-05-26 13:54:44,438 - INFO - Inserted batch 31 (10000 valid records)
+2026-05-26 13:54:44,627 - INFO - Inserted batch 32 (10000 valid records)
+2026-05-26 13:54:44,832 - INFO - Inserted batch 33 (10000 valid records)
+2026-05-26 13:54:45,076 - INFO - Inserted batch 34 (10000 valid records)
+2026-05-26 13:54:45,306 - INFO - Inserted batch 35 (10000 valid records)
+2026-05-26 13:54:45,525 - INFO - Inserted batch 36 (10000 valid records)
+2026-05-26 13:54:45,727 - INFO - Inserted batch 37 (10000 valid records)
+2026-05-26 13:54:45,945 - INFO - Inserted batch 38 (10000 valid records)
+2026-05-26 13:54:46,151 - INFO - Inserted batch 39 (10000 valid records)
+2026-05-26 13:54:46,379 - INFO - Inserted batch 40 (10000 valid records)
+2026-05-26 13:54:46,497 - INFO - Inserted batch 41 (5184 valid records)
+2026-05-26 13:54:46,498 - INFO - Data loading completed
+2026-05-26 13:54:46,720 - INFO - Total records in MongoDB: 405184
+2026-05-26 13:54:46,720 - INFO - Invalid records skipped: 0
+2026-05-26 13:54:46,721 - INFO - System health: {'pipeline_status': 'healthy', 'mongodb_connection': 'connected', 'failed_batches': 0, 'invalid_records': 0, 'last_successful_run': '2026-05-26 13:54:46'}
+2026-05-26 13:54:51,594 - INFO - Starting analysis
+2026-05-26 13:54:51,595 - INFO - Total alerts: 1776
+2026-05-26 13:54:51,595 - INFO - Warning counts: {'high_temp': 692, 'low_temp': 236, 'high_smoke': 379, 'high_co': 469}
+2026-05-26 13:54:51,596 - INFO - Invalid records: 0
+2026-05-26 13:54:51,596 - INFO - Analysis completed
+2026-05-30 07:12:21,150 - INFO - Connected to MongoDB
+2026-05-30 07:12:21,151 - INFO - Starting data load
+2026-05-30 07:12:28,763 - INFO - Existing data cleared
+2026-05-30 07:12:29,306 - INFO - Inserted batch 1 (10000 valid records)
+2026-05-30 07:18:48,778 - INFO - Connected to MongoDB
+2026-05-30 07:18:48,778 - INFO - Starting data load
+2026-05-30 07:18:49,184 - INFO - Existing data cleared
+2026-05-30 07:18:49,701 - INFO - Inserted batch 1 (10000 valid records)
+2026-05-30 07:18:49,997 - INFO - Inserted batch 2 (10000 valid records)
+2026-05-30 07:18:50,188 - INFO - Inserted batch 3 (10000 valid records)
+2026-05-30 07:18:50,376 - INFO - Inserted batch 4 (10000 valid records)
+2026-05-30 07:18:50,614 - INFO - Inserted batch 5 (10000 valid records)
+2026-05-30 07:18:50,831 - INFO - Inserted batch 6 (10000 valid records)
+2026-05-30 07:18:51,024 - INFO - Inserted batch 7 (10000 valid records)
+2026-05-30 07:18:51,222 - INFO - Inserted batch 8 (10000 valid records)
+2026-05-30 07:18:51,459 - INFO - Inserted batch 9 (10000 valid records)
+2026-05-30 07:18:51,623 - INFO - Inserted batch 10 (10000 valid records)
+2026-05-30 07:18:51,870 - INFO - Inserted batch 11 (10000 valid records)
+2026-05-30 07:18:52,030 - INFO - Inserted batch 12 (10000 valid records)
+2026-05-30 07:18:52,282 - INFO - Inserted batch 13 (10000 valid records)
+2026-05-30 07:18:52,464 - INFO - Inserted batch 14 (10000 valid records)
+2026-05-30 07:18:52,701 - INFO - Inserted batch 15 (10000 valid records)
+2026-05-30 07:18:52,886 - INFO - Inserted batch 16 (10000 valid records)
+2026-05-30 07:18:53,081 - INFO - Inserted batch 17 (10000 valid records)
+2026-05-30 07:18:53,305 - INFO - Inserted batch 18 (10000 valid records)
+2026-05-30 07:18:53,547 - INFO - Inserted batch 19 (10000 valid records)
+2026-05-30 07:18:53,728 - INFO - Inserted batch 20 (10000 valid records)
+2026-05-30 07:18:53,978 - INFO - Inserted batch 21 (10000 valid records)
+2026-05-30 07:18:54,168 - INFO - Inserted batch 22 (10000 valid records)
+2026-05-30 07:18:54,964 - INFO - Inserted batch 23 (10000 valid records)
+2026-05-30 07:18:55,135 - INFO - Inserted batch 24 (10000 valid records)
+2026-05-30 07:18:55,365 - INFO - Inserted batch 25 (10000 valid records)
+2026-05-30 07:18:55,618 - INFO - Inserted batch 26 (10000 valid records)
+2026-05-30 07:18:55,749 - INFO - Inserted batch 27 (10000 valid records)
+2026-05-30 07:18:55,941 - INFO - Inserted batch 28 (10000 valid records)
+2026-05-30 07:18:56,158 - INFO - Inserted batch 29 (10000 valid records)
+2026-05-30 07:18:56,324 - INFO - Inserted batch 30 (10000 valid records)
+2026-05-30 07:18:56,522 - INFO - Inserted batch 31 (10000 valid records)
+2026-05-30 07:18:56,744 - INFO - Inserted batch 32 (10000 valid records)
+2026-05-30 07:18:56,964 - INFO - Inserted batch 33 (10000 valid records)
+2026-05-30 07:18:57,117 - INFO - Inserted batch 34 (10000 valid records)
+2026-05-30 07:18:57,372 - INFO - Inserted batch 35 (10000 valid records)
+2026-05-30 07:18:57,572 - INFO - Inserted batch 36 (10000 valid records)
+2026-05-30 07:18:57,763 - INFO - Inserted batch 37 (10000 valid records)
+2026-05-30 07:18:57,986 - INFO - Inserted batch 38 (10000 valid records)
+2026-05-30 07:18:58,169 - INFO - Inserted batch 39 (10000 valid records)
+2026-05-30 07:18:58,434 - INFO - Inserted batch 40 (10000 valid records)
+2026-05-30 07:18:58,527 - INFO - Inserted batch 41 (5184 valid records)
+2026-05-30 07:18:58,528 - INFO - Data loading completed
+2026-05-30 07:18:58,724 - INFO - Total records in MongoDB: 405184
+2026-05-30 07:18:58,724 - INFO - Invalid records skipped: 0
+2026-05-30 07:18:58,725 - INFO - System health: {'pipeline_status': 'healthy', 'mongodb_connection': 'connected', 'failed_batches': 0, 'invalid_records': 0, 'last_successful_run': '2026-05-30 07:18:58'}
+2026-05-30 07:19:01,292 - INFO - Starting analysis
+2026-05-30 07:19:01,292 - INFO - Total alerts: 1776
+2026-05-30 07:19:01,293 - INFO - Warning counts: {'high_temp': 692, 'low_temp': 236, 'high_smoke': 379, 'high_co': 469}
+2026-05-30 07:19:01,293 - INFO - Invalid records: 0
+2026-05-30 07:19:01,293 - INFO - Analysis completed
+2026-06-13 14:06:46,886 - INFO - Connected to MongoDB
+2026-06-13 14:06:46,886 - INFO - Starting data load
+2026-06-13 14:07:03,191 - INFO - Existing data cleared
+2026-06-13 14:07:03,431 - INFO - Inserted batch 1 (10000 valid records)
+2026-06-13 14:07:03,635 - INFO - Inserted batch 2 (10000 valid records)
+2026-06-13 14:07:03,853 - INFO - Inserted batch 3 (10000 valid records)
+2026-06-13 14:07:04,050 - INFO - Inserted batch 4 (10000 valid records)
+2026-06-13 14:07:04,244 - INFO - Inserted batch 5 (10000 valid records)
+2026-06-13 14:07:04,451 - INFO - Inserted batch 6 (10000 valid records)
+2026-06-13 14:07:04,645 - INFO - Inserted batch 7 (10000 valid records)
+2026-06-13 14:07:04,942 - INFO - Inserted batch 8 (10000 valid records)
+2026-06-13 14:07:05,149 - INFO - Inserted batch 9 (10000 valid records)
+2026-06-13 14:07:05,402 - INFO - Inserted batch 10 (10000 valid records)
+2026-06-13 14:07:05,594 - INFO - Inserted batch 11 (10000 valid records)
+2026-06-13 14:07:05,781 - INFO - Inserted batch 12 (10000 valid records)
+2026-06-13 14:07:06,010 - INFO - Inserted batch 13 (10000 valid records)
+2026-06-13 14:07:06,197 - INFO - Inserted batch 14 (10000 valid records)
+2026-06-13 14:07:06,387 - INFO - Inserted batch 15 (10000 valid records)
+2026-06-13 14:07:06,598 - INFO - Inserted batch 16 (10000 valid records)
+2026-06-13 14:07:06,790 - INFO - Inserted batch 17 (10000 valid records)
+2026-06-13 14:07:07,030 - INFO - Inserted batch 18 (10000 valid records)
+2026-06-13 14:07:07,239 - INFO - Inserted batch 19 (10000 valid records)
+2026-06-13 14:07:07,426 - INFO - Inserted batch 20 (10000 valid records)
+2026-06-13 14:07:07,619 - INFO - Inserted batch 21 (10000 valid records)
+2026-06-13 14:07:07,816 - INFO - Inserted batch 22 (10000 valid records)
+2026-06-13 14:07:08,039 - INFO - Inserted batch 23 (10000 valid records)
+2026-06-13 14:07:08,237 - INFO - Inserted batch 24 (10000 valid records)
+2026-06-13 14:07:08,435 - INFO - Inserted batch 25 (10000 valid records)
+2026-06-13 14:07:08,652 - INFO - Inserted batch 26 (10000 valid records)
+2026-06-13 14:07:08,845 - INFO - Inserted batch 27 (10000 valid records)
+2026-06-13 14:07:09,043 - INFO - Inserted batch 28 (10000 valid records)
+2026-06-13 14:07:09,262 - INFO - Inserted batch 29 (10000 valid records)
+2026-06-13 14:07:09,476 - INFO - Inserted batch 30 (10000 valid records)
+2026-06-13 14:07:09,668 - INFO - Inserted batch 31 (10000 valid records)
+2026-06-13 14:07:09,859 - INFO - Inserted batch 32 (10000 valid records)
+2026-06-13 14:07:10,072 - INFO - Inserted batch 33 (10000 valid records)
+2026-06-13 14:07:10,263 - INFO - Inserted batch 34 (10000 valid records)
+2026-06-13 14:07:10,453 - INFO - Inserted batch 35 (10000 valid records)
+2026-06-13 14:07:10,661 - INFO - Inserted batch 36 (10000 valid records)
+2026-06-13 14:07:10,851 - INFO - Inserted batch 37 (10000 valid records)
+2026-06-13 14:07:11,045 - INFO - Inserted batch 38 (10000 valid records)
+2026-06-13 14:07:11,238 - INFO - Inserted batch 39 (10000 valid records)
+2026-06-13 14:07:11,449 - INFO - Inserted batch 40 (10000 valid records)
+2026-06-13 14:07:11,554 - INFO - Inserted batch 41 (5184 valid records)
+2026-06-13 14:07:11,555 - INFO - Data loading completed
+2026-06-13 14:07:11,785 - INFO - Total records in MongoDB: 405184
+2026-06-13 14:07:11,785 - INFO - Invalid records skipped: 0
+2026-06-13 14:07:11,786 - INFO - System health: {'pipeline_status': 'healthy', 'mongodb_connection': 'connected', 'failed_batches': 0, 'invalid_records': 0, 'last_successful_run': '2026-06-13 14:07:11'}
+2026-06-13 14:07:15,129 - INFO - Starting analysis
+2026-06-13 14:07:15,130 - INFO - Total alerts: 1776
+2026-06-13 14:07:15,130 - INFO - Warning counts: {'high_temp': 692, 'low_temp': 236, 'high_smoke': 379, 'high_co': 469}
+2026-06-13 14:07:15,131 - INFO - Invalid records: 0
+2026-06-13 14:07:15,132 - INFO - Analysis completed
