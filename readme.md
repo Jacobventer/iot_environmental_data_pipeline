@@ -11,7 +11,8 @@ ________________________________________
 
 ## Operational Scenario
 Environmental sensors are deployed throughout the Kungwini municipality.
-Sensor measurements are collected continuously and processed every 6 hours in batches.
+Sensor measurements are assumed to be collected continuously.
+In the intended operational scenario, telemetry data would be processed every 6 hours in batches.
 
 Telemetry data is processed every 6 hours in batches. 
 The generated dashboard allows city planners to:  
@@ -87,8 +88,8 @@ ________________________________________
 •	Processes environmental telemetry  
 •	Generates alerts  
 •	Calculates warning counts  
-•	Creates planner-facing recommendations  
-•	Generates monitoring outputs  
+•      Creates planner-facing messages and recommended actions
+•      Generates summary statistics and monitoring outputs
 
 ### visualize.py  
 •	Creates environmental visualisations  
@@ -106,7 +107,7 @@ The dashboard provides:
 •	Latest environmental alert  
 •	Alert counts  
 •	Top warning sensors  
-•	Data-input health  
+•	Data-quality and processing health 
 •	Batch-processing status  
 •	Environmental visualisations  
 
@@ -165,7 +166,7 @@ data/
 
 ### 3. Run the Pipeline  
 ```
-docker compose up –build  
+docker compose up –-build  
 ```
 The pipeline will: 
 
