@@ -80,10 +80,8 @@ for batch_number, chunk in enumerate(pd.read_csv(file_path, chunksize=batch_size
     data = valid_chunk.to_dict(orient="records")
 
     try:
-
         #Insert batch
         collection.insert_many(data)
-
         total_loaded += len(data)
 
         #Batch progress tracking
