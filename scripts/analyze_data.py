@@ -80,7 +80,7 @@ for record in cursor:
     smokes.append(smoke)
     cos.append(co)
 
-    # Temperature alerts
+    #Temperature alerts
     if temp > TEMP_HIGH:
         counts["high_temp"] += 1
 
@@ -91,13 +91,13 @@ for record in cursor:
 
         alerts.append({"sensor": sensor, "type": "low_temp", "value": temp})
 
-    # Smoke alerts
+    #Smoke alerts
     if smoke > SMOKE_HIGH:
         counts["high_smoke"] += 1
 
         alerts.append({"sensor": sensor, "type": "high_smoke", "value": smoke})
 
-    # CO alerts
+    #CO alerts
     if co > CO_HIGH:
         counts["high_co"] += 1
 
