@@ -12,17 +12,17 @@ ________________________________________
 ## Operational Scenario
 Environmental sensors are deployed throughout the Kungwini municipality and collect measurements at regular intervals.  
 
-The municipal environmental team operates the pipeline every 6 hours to load newly collected telemetry data into the system.
-During each execution, the new sensor data is processed in batches of 10,000 records and the dashboard is updated with the latest environmental alerts, monitoring information and health indicators.
+The municipal environmental team runs the pipeline every 6 hours to load newly collected telemetry data into the system.  
+During each execution, the new sensor data is processed in batches of 10,000 records to reduce memory usage, improve performance and maintain processing stability when handling large datasets.   The dashboard is then updated with the latest environmental alerts, monitoring information and health indicators.
 
 The generated dashboard allows city planners to:
 
-Monitor environmental conditions
-Review environmental alerts
-Identify sensors requiring investigation
-Monitor data quality
-Monitor processing health
-Dispatch maintenance or investigation teams when required
+- Monitor environmental conditions
+- Review environmental alerts
+- Identify sensors requiring investigation
+- Monitor data quality
+- Monitor processing health
+- Dispatch maintenance or investigation teams when required
 
 This system is intended as an environmental information service and not as a real-time emergency response system.
 
@@ -90,6 +90,8 @@ ________________________________________
 •	Calculates warning counts  
 •      Creates planner-facing messages and recommended actions
 •      Generates summary statistics and monitoring outputs
+•      Tracks data quality, invalid records, processing health and the time of the last successful data load
+
 
 ### visualize.py  
 •	Creates environmental visualisations  
@@ -108,6 +110,7 @@ The dashboard provides:
 •	Alert counts  
 •	Top warning sensors  
 •	Data-quality and processing health 
+•      Last successful data load
 •	Batch-processing status  
 •	Environmental visualisations  
 
@@ -166,7 +169,7 @@ data/
 
 ### 3. Run the Pipeline  
 ```
-docker compose up –-build  
+docker compose up --build
 ```
 The pipeline will: 
 
