@@ -13,7 +13,10 @@ ________________________________________
 Environmental sensors are deployed throughout the Kungwini municipality and collect measurements at regular intervals.  
 
 The municipal environmental team runs the pipeline every 6 hours to load newly collected telemetry data into the system.  
-During each execution, the new sensor data is processed in batches of 10,000 records to reduce memory usage, improve performance and maintain processing stability when handling large datasets.   The dashboard is then updated with the latest environmental alerts, monitoring information and health indicators.
+During each execution, the new sensor data is processed in batches of 10,000 records to reduce memory usage, improve performance   
+and maintain processing stability when handling large datasets. Processing continues until all records have been loaded.   
+The dashboard is then updated with the latest environmental alerts, monitoring information and health indicators.   
+If processing is incomplete, the dashboard reports the number of expected and processed records and recommends re-running the pipeline.
 
 The generated dashboard allows city planners to:
 
@@ -82,22 +85,25 @@ ________________________________________
 •	Batch size: 10,000 records  
 •	Tracks loading status  
 •	Tracks invalid records  
+•      Detects incomplete processing
 •	Generates system-health outputs  
 
 ### analyze_data.py  
-•	Processes environmental telemetry  
-•	Generates alerts  
-•	Calculates warning counts  
+•	Processes environmental telemetry   
+•	Generates environmental alerts    
+•	Calculates alert counts and summary statistics   
 •      Creates planner-facing messages and recommended actions
-•      Generates summary statistics and monitoring outputs
 •      Tracks data quality, invalid records, processing health and the time of the last successful data load
 
 
 ### visualize.py  
 •	Creates environmental visualisations  
 •	Generates the municipal dashboard  
-•	Displays alerts, health information and batch status  
-
+•      Displays planner recommendations
+•      Displays environmental alert locations
+•      Displays data-quality and system-health information
+•      Displays batch-processing status and incomplete-processing warnings
+       
 ________________________________________
 
 ## Dashboard Features  
@@ -107,12 +113,12 @@ The dashboard provides:
 •	Recommended actions  
 •	Data-quality information  
 •	Latest environmental alert  
-•	Alert counts  
-•	Top warning sensors  
-•	Data-quality and processing health 
+•      Environmental alert summary
+•      Alert locations 
+•      Operational summary
+•      Data-quality and processing health
 •      Last successful data load
-•	Batch-processing status  
-•	Environmental visualisations  
+•      Batch-processing status  
 
 ________________________________________
 
