@@ -86,7 +86,7 @@ ________________________________________
 •	Batch size: 10,000 records  
 •	Tracks loading status  
 •	Tracks invalid records  
-•      Detects incomplete processing
+•      Detects incomplete processing  
 •	Generates system-health outputs  
 
 ### analyze_data.py  
@@ -114,7 +114,7 @@ The dashboard provides:
 •	Recommended actions  
 •	Data-quality information  
 •	Latest environmental alert  
-•      Environmental alert summary
+•      Environmental alert counts
 •      Alert locations 
 •      Operational summary
 •      Data-quality and processing health
