@@ -112,15 +112,15 @@ ________________________________________
 The dashboard provides:  
 
 •	Planner messages  
-•	Recommended actions  
-•	Data-quality information  
-•	Latest environmental alert  
-•      Environmental alert counts
-•      Alert locations 
-•      Operational summary
-•      Data-quality and processing health
-•      Last successful data load
-•      Batch-processing status  
+•	Recommended actions    
+•	Data-quality information    
+•	Latest environmental alert    
+•      Environmental alert counts  
+•      Alert locations   
+•      Operational summary  
+•      Data-quality and processing health  
+•      Last successful data load  
+•      Batch-processing status    
 
 ________________________________________
 
