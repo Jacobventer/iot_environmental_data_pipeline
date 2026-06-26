@@ -90,11 +90,12 @@ ________________________________________
 •	Generates system-health outputs  
 
 ### analyze_data.py  
-•	Processes environmental telemetry   
-•	Generates environmental alerts    
-•	Calculates alert counts and summary statistics   
-•      Creates planner-facing messages and recommended actions  
-•      Tracks data quality, invalid records, processing health and the time of the last successful data load
+•	Processes environmental telemetry     
+•	Generates environmental alerts     
+•	Calculates alert counts and summary statistics     
+•      Creates planner-facing messages and recommended actions      
+•      Tracks data quality & invalid records  
+•      Processing health   
 
 
 ### visualize.py  
