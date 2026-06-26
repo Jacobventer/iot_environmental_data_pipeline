@@ -17,7 +17,7 @@ The municipal environmental team runs the pipeline every 6 hours to load newly c
 During each execution, the new sensor data is processed in batches of 10,000 records to reduce memory usage, improve performance   
 and maintain processing stability when handling large datasets. Processing continues until all records have been loaded.   
 The dashboard is then updated with the latest environmental alerts, monitoring information and health indicators.   
-If processing is incomplete, the dashboard reports the number of expected and processed records and recommends re-running the pipeline.
+The dashboard reports the number of expected and processed records and recommends re-running the pipeline if the numbers are a mismatch.
 
 The generated dashboard allows city planners to:
 
