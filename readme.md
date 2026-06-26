@@ -101,10 +101,10 @@ ________________________________________
 ### visualize.py  
 •	Creates environmental visualisations  
 •	Generates the municipal dashboard  
-•      Displays planner recommendations
-•      Displays environmental alert locations
-•      Displays data-quality and system-health information
-•      Displays batch-processing status and incomplete-processing warnings
+•      Displays planner recommendations  
+•      Displays environmental alert locations  
+•      Displays data-quality and system-health information  
+•      Displays batch-processing status and incomplete-processing warnings  
        
 ________________________________________
 
